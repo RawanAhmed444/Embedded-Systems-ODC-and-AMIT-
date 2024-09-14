@@ -28,6 +28,8 @@ This project demonstrates how to control a 7-segment display using the AVR ATmeg
 3. **Observe the display:** The 7-segment display should count from 0 to 9.
 
 **Video Tutorial:** [Link to video tutorial on YouTube or other platform]
+**Descriping Image:** ![Image on Proteus](https://github.com/user-attachments/assets/df7085c4-0979-4931-9527-a28105b2fdb7)
+
 
 **Additional Notes:**
 
