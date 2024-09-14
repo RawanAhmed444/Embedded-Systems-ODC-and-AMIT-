@@ -30,7 +30,7 @@ This project demonstrates how to control a 7-segment display using the AVR ATmeg
 **Video Tutorial:** [Link to video tutorial on YouTube or other platform]
 
 
-**Descriping Image:** ![Image on Proteus](https://github.com/user-attachments/assets/df7085c4-0979-4931-9527-a28105b2fdb7)
+**Descriping Image:** ![Image on Proteus](https://github.com/user-attachments/assets/89dae90b-e11d-4dfa-b973-7dd7793f95b7)
 
 
 **Additional Notes:**
