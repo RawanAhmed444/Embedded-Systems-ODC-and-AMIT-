@@ -18,8 +18,8 @@ This project demonstrates how to control a 7-segment display using the AVR ATmeg
 
 **Hardware Requirements:**
 
-- AVR ATmega32 microcontroller development board
-- 7-segment display
+- AVR ATmega32 microcontroller 
+- 7-segment display (commen cathode)
 
 **Usage:**
 
