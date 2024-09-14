@@ -10,7 +10,7 @@ This repository showcases a collection of embedded systems projects developed us
 - **Microcontroller:** AVR ATmega32
 - **Datasheet:** [Link to ATmega32 datasheet](https://drive.google.com/file/d/1UMuUQ7lK8PmzG-fhNcWcx1v4-HpnDq6v/view?usp=sharing)
 
-**Project 1: 7-Segment Display**
+## **Project 1: 7-Segment Display**
 
 **Description:**
 
@@ -18,8 +18,8 @@ This project demonstrates how to control a 7-segment display using the AVR ATmeg
 
 **Hardware Requirements:**
 
-- AVR ATmega32 microcontroller development board
-- 7-segment display
+- AVR ATmega32 microcontroller 
+- 7-segment display (common cathode)
 
 **Usage:**
 
@@ -30,7 +30,7 @@ This project demonstrates how to control a 7-segment display using the AVR ATmeg
 **Video Tutorial:** [Link to video tutorial on YouTube or other platform]
 
 
-**Descriping Image:** ![Image on Proteus](https://github.com/user-attachments/assets/df7085c4-0979-4931-9527-a28105b2fdb7)
+**Descriping Image:** ![Image on Proteus](https://github.com/user-attachments/assets/89dae90b-e11d-4dfa-b973-7dd7793f95b7)
 
 
 **Additional Notes:**
