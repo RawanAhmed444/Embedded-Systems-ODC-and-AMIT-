@@ -1,0 +1,394 @@
+
+Traffic Lightening System.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000000b0  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  00800060  00000212  000002a6  2**0
+                  ALLOC, LOAD, DATA
+  2 .comment      0000002f  00000000  00000000  000002a6  2**0
+                  CONTENTS, READONLY
+  3 .stack.descriptors.hdr 0000000e  00000000  00000000  000002d5  2**0
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000020  00000000  00000000  000002e3  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00000994  00000000  00000000  00000303  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 000005af  00000000  00000000  00000c97  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   000002c8  00000000  00000000  00001246  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000034  00000000  00000000  00001510  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    00000196  00000000  00000000  00001544  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    000001eb  00000000  00000000  000016da  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000010  00000000  00000000  000018c5  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .text         00000004  000001f0  000001f0  00000284  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 13 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  000018d8  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 14 .rodata       00000014  00800060  000001fe  00000292  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+ 15 .text.main    0000012a  000000b0  000000b0  00000144  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 16 .text.__dummy_fini 00000002  000001f8  000001f8  0000028c  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 17 .text.__dummy_funcs_on_exit 00000002  000001fa  000001fa  0000028e  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 18 .text.__dummy_simulator_exit 00000002  000001fc  000001fc  00000290  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 19 .text.exit    00000016  000001da  000001da  0000026e  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 20 .text._Exit   00000004  000001f4  000001f4  00000288  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 2e 00 	jmp	0x5c	; 0x5c <__ctors_end>
+   4:	0c 94 f8 00 	jmp	0x1f0	; 0x1f0 <__bad_interrupt>
+   8:	0c 94 f8 00 	jmp	0x1f0	; 0x1f0 <__bad_interrupt>
+   c:	0c 94 f8 00 	jmp	0x1f0	; 0x1f0 <__bad_interrupt>
+  10:	0c 94 f8 00 	jmp	0x1f0	; 0x1f0 <__bad_interrupt>
+  14:	0c 94 f8 00 	jmp	0x1f0	; 0x1f0 <__bad_interrupt>
+  18:	0c 94 f8 00 	jmp	0x1f0	; 0x1f0 <__bad_interrupt>
+  1c:	0c 94 f8 00 	jmp	0x1f0	; 0x1f0 <__bad_interrupt>
+  20:	0c 94 f8 00 	jmp	0x1f0	; 0x1f0 <__bad_interrupt>
+  24:	0c 94 f8 00 	jmp	0x1f0	; 0x1f0 <__bad_interrupt>
+  28:	0c 94 f8 00 	jmp	0x1f0	; 0x1f0 <__bad_interrupt>
+  2c:	0c 94 f8 00 	jmp	0x1f0	; 0x1f0 <__bad_interrupt>
+  30:	0c 94 f8 00 	jmp	0x1f0	; 0x1f0 <__bad_interrupt>
+  34:	0c 94 f8 00 	jmp	0x1f0	; 0x1f0 <__bad_interrupt>
+  38:	0c 94 f8 00 	jmp	0x1f0	; 0x1f0 <__bad_interrupt>
+  3c:	0c 94 f8 00 	jmp	0x1f0	; 0x1f0 <__bad_interrupt>
+  40:	0c 94 f8 00 	jmp	0x1f0	; 0x1f0 <__bad_interrupt>
+  44:	0c 94 f8 00 	jmp	0x1f0	; 0x1f0 <__bad_interrupt>
+  48:	0c 94 f8 00 	jmp	0x1f0	; 0x1f0 <__bad_interrupt>
+  4c:	0c 94 f8 00 	jmp	0x1f0	; 0x1f0 <__bad_interrupt>
+  50:	0c 94 f8 00 	jmp	0x1f0	; 0x1f0 <__bad_interrupt>
+
+00000054 <.dinit>:
+  54:	00 60       	ori	r16, 0x00	; 0
+  56:	00 74       	andi	r16, 0x40	; 64
+  58:	00 01       	movw	r0, r0
+  5a:	fe 00       	.word	0x00fe	; ????
+
+0000005c <__ctors_end>:
+  5c:	11 24       	eor	r1, r1
+  5e:	1f be       	out	0x3f, r1	; 63
+  60:	cf e5       	ldi	r28, 0x5F	; 95
+  62:	d8 e0       	ldi	r29, 0x08	; 8
+  64:	de bf       	out	0x3e, r29	; 62
+  66:	cd bf       	out	0x3d, r28	; 61
+
+00000068 <__do_copy_data>:
+  68:	e4 e5       	ldi	r30, 0x54	; 84
+  6a:	f0 e0       	ldi	r31, 0x00	; 0
+  6c:	40 e0       	ldi	r20, 0x00	; 0
+  6e:	17 c0       	rjmp	.+46     	; 0x9e <__do_clear_bss+0x8>
+  70:	b5 91       	lpm	r27, Z+
+  72:	a5 91       	lpm	r26, Z+
+  74:	35 91       	lpm	r19, Z+
+  76:	25 91       	lpm	r18, Z+
+  78:	05 91       	lpm	r16, Z+
+  7a:	07 fd       	sbrc	r16, 7
+  7c:	0c c0       	rjmp	.+24     	; 0x96 <__do_clear_bss>
+  7e:	95 91       	lpm	r25, Z+
+  80:	85 91       	lpm	r24, Z+
+  82:	ef 01       	movw	r28, r30
+  84:	f9 2f       	mov	r31, r25
+  86:	e8 2f       	mov	r30, r24
+  88:	05 90       	lpm	r0, Z+
+  8a:	0d 92       	st	X+, r0
+  8c:	a2 17       	cp	r26, r18
+  8e:	b3 07       	cpc	r27, r19
+  90:	d9 f7       	brne	.-10     	; 0x88 <__do_copy_data+0x20>
+  92:	fe 01       	movw	r30, r28
+  94:	04 c0       	rjmp	.+8      	; 0x9e <__do_clear_bss+0x8>
+
+00000096 <__do_clear_bss>:
+  96:	1d 92       	st	X+, r1
+  98:	a2 17       	cp	r26, r18
+  9a:	b3 07       	cpc	r27, r19
+  9c:	e1 f7       	brne	.-8      	; 0x96 <__do_clear_bss>
+  9e:	eb 35       	cpi	r30, 0x5B	; 91
+  a0:	f4 07       	cpc	r31, r20
+  a2:	31 f7       	brne	.-52     	; 0x70 <__do_copy_data+0x8>
+  a4:	0e 94 58 00 	call	0xb0	; 0xb0 <_etext>
+  a8:	0c 94 ed 00 	jmp	0x1da	; 0x1da <exit>
+
+000000ac <_exit>:
+  ac:	f8 94       	cli
+
+000000ae <__stop_program>:
+  ae:	ff cf       	rjmp	.-2      	; 0xae <__stop_program>
+
+Disassembly of section .text:
+
+000001f0 <__bad_interrupt>:
+ 1f0:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+Disassembly of section .text.main:
+
+000000b0 <main>:
+ * Apply forever while counting down the seconds on two 7-segment displays
+ */
+
+
+int main(void)
+{
+  b0:	cf 93       	push	r28
+  b2:	df 93       	push	r29
+  b4:	cd b7       	in	r28, 0x3d	; 61
+  b6:	de b7       	in	r29, 0x3e	; 62
+  b8:	64 97       	sbiw	r28, 0x14	; 20
+  ba:	0f b6       	in	r0, 0x3f	; 63
+  bc:	f8 94       	cli
+  be:	de bf       	out	0x3e, r29	; 62
+  c0:	0f be       	out	0x3f, r0	; 63
+  c2:	cd bf       	out	0x3d, r28	; 61
+	/*Setting DDRA, DDRC,and DDRD registers as output*/
+	DDRA = 0x07 ;
+  c4:	87 e0       	ldi	r24, 0x07	; 7
+  c6:	8a bb       	out	0x1a, r24	; 26
+	DDRC = 0x7F ;
+  c8:	8f e7       	ldi	r24, 0x7F	; 127
+  ca:	84 bb       	out	0x14, r24	; 20
+	DDRD = 0x7F ;
+  cc:	81 bb       	out	0x11, r24	; 17
+	
+	/*Hex values of pins in PORTC and PORTD to display numbers in descending order*/
+	int arr [10] = {0x6F, 0x7F, 0x07, 0x7D, 0x6D, 0x66, 0x4F, 0x5B, 0x06, 0x3F} ;
+  ce:	84 e1       	ldi	r24, 0x14	; 20
+  d0:	e0 e6       	ldi	r30, 0x60	; 96
+  d2:	f0 e0       	ldi	r31, 0x00	; 0
+  d4:	de 01       	movw	r26, r28
+  d6:	11 96       	adiw	r26, 0x01	; 1
+  d8:	01 90       	ld	r0, Z+
+  da:	0d 92       	st	X+, r0
+  dc:	8a 95       	dec	r24
+  de:	e1 f7       	brne	.-8      	; 0xd8 <main+0x28>
+			
+    while(1)
+    {		
+         /*lightening green led while counting 10 seconds down on two 7-segments displays*/
+         for (int x = 0; x < 10; x++)
+  e0:	80 e0       	ldi	r24, 0x00	; 0
+  e2:	90 e0       	ldi	r25, 0x00	; 0
+  e4:	28 c0       	rjmp	.+80     	; 0x136 <main+0x86>
+         {
+			 
+			 PORTA = 0x04 ;	//Setting PINA2 HIGH
+  e6:	24 e0       	ldi	r18, 0x04	; 4
+  e8:	2b bb       	out	0x1b, r18	; 27
+			 while (x == 0)	//Counting number 10
+  ea:	00 97       	sbiw	r24, 0x00	; 0
+  ec:	69 f4       	brne	.+26     	; 0x108 <main+0x58>
+			 {
+				 PORTC = arr[9] ;
+  ee:	2b 89       	ldd	r18, Y+19	; 0x13
+  f0:	25 bb       	out	0x15, r18	; 21
+				 PORTD = arr[8] ;
+  f2:	29 89       	ldd	r18, Y+17	; 0x11
+  f4:	22 bb       	out	0x12, r18	; 18
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+  f6:	2f e7       	ldi	r18, 0x7F	; 127
+  f8:	34 e8       	ldi	r19, 0x84	; 132
+  fa:	4e e1       	ldi	r20, 0x1E	; 30
+  fc:	21 50       	subi	r18, 0x01	; 1
+  fe:	30 40       	sbci	r19, 0x00	; 0
+ 100:	40 40       	sbci	r20, 0x00	; 0
+ 102:	e1 f7       	brne	.-8      	; 0xfc <main+0x4c>
+ 104:	00 c0       	rjmp	.+0      	; 0x106 <main+0x56>
+ 106:	00 00       	nop
+				 _delay_ms(10000) ;
+				 break ;
+			 }
+			 PORTC = arr[x] ;
+ 108:	fc 01       	movw	r30, r24
+ 10a:	ee 0f       	add	r30, r30
+ 10c:	ff 1f       	adc	r31, r31
+ 10e:	21 e0       	ldi	r18, 0x01	; 1
+ 110:	30 e0       	ldi	r19, 0x00	; 0
+ 112:	2c 0f       	add	r18, r28
+ 114:	3d 1f       	adc	r19, r29
+ 116:	e2 0f       	add	r30, r18
+ 118:	f3 1f       	adc	r31, r19
+ 11a:	20 81       	ld	r18, Z
+ 11c:	25 bb       	out	0x15, r18	; 21
+			 PORTD = arr[9] ;
+ 11e:	2b 89       	ldd	r18, Y+19	; 0x13
+ 120:	22 bb       	out	0x12, r18	; 18
+ 122:	3f e7       	ldi	r19, 0x7F	; 127
+ 124:	44 e8       	ldi	r20, 0x84	; 132
+ 126:	2e e1       	ldi	r18, 0x1E	; 30
+ 128:	31 50       	subi	r19, 0x01	; 1
+ 12a:	40 40       	sbci	r20, 0x00	; 0
+ 12c:	20 40       	sbci	r18, 0x00	; 0
+ 12e:	e1 f7       	brne	.-8      	; 0x128 <main+0x78>
+ 130:	00 c0       	rjmp	.+0      	; 0x132 <main+0x82>
+ 132:	00 00       	nop
+	int arr [10] = {0x6F, 0x7F, 0x07, 0x7D, 0x6D, 0x66, 0x4F, 0x5B, 0x06, 0x3F} ;
+			
+    while(1)
+    {		
+         /*lightening green led while counting 10 seconds down on two 7-segments displays*/
+         for (int x = 0; x < 10; x++)
+ 134:	01 96       	adiw	r24, 0x01	; 1
+ 136:	8a 30       	cpi	r24, 0x0A	; 10
+ 138:	91 05       	cpc	r25, r1
+ 13a:	ac f2       	brlt	.-86     	; 0xe6 <main+0x36>
+ 13c:	80 e0       	ldi	r24, 0x00	; 0
+ 13e:	90 e0       	ldi	r25, 0x00	; 0
+ 140:	1a c0       	rjmp	.+52     	; 0x176 <main+0xc6>
+         }
+		 /*lightening yellow led while counting 3 seconds down on two 7-segments displays*/
+		 for (int x = 0; x < 3; x++)
+		 {
+			 
+			 PORTA = 0x02 ;	//Setting PINA1 HIGH
+ 142:	22 e0       	ldi	r18, 0x02	; 2
+ 144:	2b bb       	out	0x1b, r18	; 27
+			 PORTC = arr[x+6] ;
+ 146:	fc 01       	movw	r30, r24
+ 148:	36 96       	adiw	r30, 0x06	; 6
+ 14a:	ee 0f       	add	r30, r30
+ 14c:	ff 1f       	adc	r31, r31
+ 14e:	21 e0       	ldi	r18, 0x01	; 1
+ 150:	30 e0       	ldi	r19, 0x00	; 0
+ 152:	2c 0f       	add	r18, r28
+ 154:	3d 1f       	adc	r19, r29
+ 156:	e2 0f       	add	r30, r18
+ 158:	f3 1f       	adc	r31, r19
+ 15a:	20 81       	ld	r18, Z
+ 15c:	25 bb       	out	0x15, r18	; 21
+			 PORTD = arr[9] ;
+ 15e:	2b 89       	ldd	r18, Y+19	; 0x13
+ 160:	22 bb       	out	0x12, r18	; 18
+ 162:	3f e7       	ldi	r19, 0x7F	; 127
+ 164:	44 e8       	ldi	r20, 0x84	; 132
+ 166:	2e e1       	ldi	r18, 0x1E	; 30
+ 168:	31 50       	subi	r19, 0x01	; 1
+ 16a:	40 40       	sbci	r20, 0x00	; 0
+ 16c:	20 40       	sbci	r18, 0x00	; 0
+ 16e:	e1 f7       	brne	.-8      	; 0x168 <main+0xb8>
+ 170:	00 c0       	rjmp	.+0      	; 0x172 <main+0xc2>
+ 172:	00 00       	nop
+			 {
+				 break ;
+			 }
+         }
+		 /*lightening yellow led while counting 3 seconds down on two 7-segments displays*/
+		 for (int x = 0; x < 3; x++)
+ 174:	01 96       	adiw	r24, 0x01	; 1
+ 176:	83 30       	cpi	r24, 0x03	; 3
+ 178:	91 05       	cpc	r25, r1
+ 17a:	1c f3       	brlt	.-58     	; 0x142 <main+0x92>
+ 17c:	80 e0       	ldi	r24, 0x00	; 0
+ 17e:	90 e0       	ldi	r25, 0x00	; 0
+ 180:	28 c0       	rjmp	.+80     	; 0x1d2 <main+0x122>
+		 }
+		 /*lightening red led while counting 10 seconds down on two 7-segments displays*/
+		 for (int x = 0; x < 10; x++)
+		 {
+			 
+			 PORTA = 0x01 ;	//Setting PINA0 HIGH
+ 182:	21 e0       	ldi	r18, 0x01	; 1
+ 184:	2b bb       	out	0x1b, r18	; 27
+			 while (x == 0)	//Counting number 10
+ 186:	00 97       	sbiw	r24, 0x00	; 0
+ 188:	69 f4       	brne	.+26     	; 0x1a4 <main+0xf4>
+			 {
+				 PORTC = arr[9] ;
+ 18a:	2b 89       	ldd	r18, Y+19	; 0x13
+ 18c:	25 bb       	out	0x15, r18	; 21
+				 PORTD = arr[8] ;
+ 18e:	29 89       	ldd	r18, Y+17	; 0x11
+ 190:	22 bb       	out	0x12, r18	; 18
+ 192:	3f e7       	ldi	r19, 0x7F	; 127
+ 194:	44 e8       	ldi	r20, 0x84	; 132
+ 196:	2e e1       	ldi	r18, 0x1E	; 30
+ 198:	31 50       	subi	r19, 0x01	; 1
+ 19a:	40 40       	sbci	r20, 0x00	; 0
+ 19c:	20 40       	sbci	r18, 0x00	; 0
+ 19e:	e1 f7       	brne	.-8      	; 0x198 <main+0xe8>
+ 1a0:	00 c0       	rjmp	.+0      	; 0x1a2 <main+0xf2>
+ 1a2:	00 00       	nop
+				 _delay_ms(10000) ;
+				 break ;
+			 }
+			 PORTC = arr[x] ;
+ 1a4:	fc 01       	movw	r30, r24
+ 1a6:	ee 0f       	add	r30, r30
+ 1a8:	ff 1f       	adc	r31, r31
+ 1aa:	21 e0       	ldi	r18, 0x01	; 1
+ 1ac:	30 e0       	ldi	r19, 0x00	; 0
+ 1ae:	2c 0f       	add	r18, r28
+ 1b0:	3d 1f       	adc	r19, r29
+ 1b2:	e2 0f       	add	r30, r18
+ 1b4:	f3 1f       	adc	r31, r19
+ 1b6:	20 81       	ld	r18, Z
+ 1b8:	25 bb       	out	0x15, r18	; 21
+			 PORTD = arr[9] ;
+ 1ba:	2b 89       	ldd	r18, Y+19	; 0x13
+ 1bc:	22 bb       	out	0x12, r18	; 18
+ 1be:	3f e7       	ldi	r19, 0x7F	; 127
+ 1c0:	44 e8       	ldi	r20, 0x84	; 132
+ 1c2:	2e e1       	ldi	r18, 0x1E	; 30
+ 1c4:	31 50       	subi	r19, 0x01	; 1
+ 1c6:	40 40       	sbci	r20, 0x00	; 0
+ 1c8:	20 40       	sbci	r18, 0x00	; 0
+ 1ca:	e1 f7       	brne	.-8      	; 0x1c4 <main+0x114>
+ 1cc:	00 c0       	rjmp	.+0      	; 0x1ce <main+0x11e>
+ 1ce:	00 00       	nop
+			 {
+				 break ;
+			 }
+		 }
+		 /*lightening red led while counting 10 seconds down on two 7-segments displays*/
+		 for (int x = 0; x < 10; x++)
+ 1d0:	01 96       	adiw	r24, 0x01	; 1
+ 1d2:	8a 30       	cpi	r24, 0x0A	; 10
+ 1d4:	91 05       	cpc	r25, r1
+ 1d6:	ac f2       	brlt	.-86     	; 0x182 <main+0xd2>
+ 1d8:	83 cf       	rjmp	.-250    	; 0xe0 <main+0x30>
+
+Disassembly of section .text.__dummy_fini:
+
+000001f8 <_fini>:
+ 1f8:	08 95       	ret
+
+Disassembly of section .text.__dummy_funcs_on_exit:
+
+000001fa <__funcs_on_exit>:
+ 1fa:	08 95       	ret
+
+Disassembly of section .text.__dummy_simulator_exit:
+
+000001fc <__simulator_exit>:
+ 1fc:	08 95       	ret
+
+Disassembly of section .text.exit:
+
+000001da <exit>:
+ 1da:	ec 01       	movw	r28, r24
+ 1dc:	0e 94 fd 00 	call	0x1fa	; 0x1fa <__funcs_on_exit>
+ 1e0:	0e 94 fc 00 	call	0x1f8	; 0x1f8 <_fini>
+ 1e4:	ce 01       	movw	r24, r28
+ 1e6:	0e 94 fe 00 	call	0x1fc	; 0x1fc <__simulator_exit>
+ 1ea:	ce 01       	movw	r24, r28
+ 1ec:	0e 94 fa 00 	call	0x1f4	; 0x1f4 <_Exit>
+
+Disassembly of section .text._Exit:
+
+000001f4 <_Exit>:
+ 1f4:	0e 94 56 00 	call	0xac	; 0xac <_exit>
