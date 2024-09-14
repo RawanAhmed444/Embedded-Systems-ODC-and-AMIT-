@@ -10,7 +10,7 @@ This repository showcases a collection of embedded systems projects developed us
 - **Microcontroller:** AVR ATmega32
 - **Datasheet:** [Link to ATmega32 datasheet](https://drive.google.com/file/d/1UMuUQ7lK8PmzG-fhNcWcx1v4-HpnDq6v/view?usp=sharing)
 
-**Project 1: 7-Segment Display**
+## **Project 1: 7-Segment Display**
 
 **Description:**
 
