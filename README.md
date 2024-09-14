@@ -7,7 +7,7 @@ This repository showcases a collection of embedded systems projects developed us
 
 - **Development Environment:** ![atmel](https://github.com/user-attachments/assets/e22d047e-823e-4d61-8574-07184f4ab3a7) Atmel Studio 7.0
 - **Simulation Software:** ![proteus](https://github.com/user-attachments/assets/c13fbe1c-637f-4439-9510-5b23406451ab) Proteus 8 Application Framework
-- **Language Used:** ![icons8-c-programming-48](https://github.com/user-attachments/assets/f21fcae9-d9cf-4b8e-8bc6-18653d0b1ddb) C Language
+- **Language Used:** ![c](https://github.com/user-attachments/assets/8a5cadaf-67d5-4db9-942b-f962f800a653) C Language
 - **Microcontroller:** AVR ATmega32
 - **Datasheet:** [Link to ATmega32 datasheet](https://drive.google.com/file/d/1UMuUQ7lK8PmzG-fhNcWcx1v4-HpnDq6v/view?usp=sharing)
 
@@ -34,7 +34,8 @@ This project demonstrates how to control a 7-segment display using the AVR ATmeg
 
 
 **Descriping Image:** 
-<br> 
+
+
 ![Image on Proteus](https://github.com/user-attachments/assets/89dae90b-e11d-4dfa-b973-7dd7793f95b7)
 
 
@@ -69,7 +70,9 @@ This project implements a basic traffic light system using an AVR microcontrolle
 
 
 **Descriping Image:** 
-<br> 
+
+
+
 ![Image 2 on Proteus](https://github.com/user-attachments/assets/7fb015e2-38c4-4cc1-bdc1-a383d66c265a)
 
 
