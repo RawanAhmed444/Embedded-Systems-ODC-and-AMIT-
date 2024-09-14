@@ -7,7 +7,7 @@ This repository showcases a collection of embedded systems projects developed us
 
 - **Development Environment:** ![atmel](https://github.com/user-attachments/assets/e22d047e-823e-4d61-8574-07184f4ab3a7) Atmel Studio 7.0
 - **Simulation Software:** ![proteus](https://github.com/user-attachments/assets/c13fbe1c-637f-4439-9510-5b23406451ab) Proteus 8 Application Framework
-- **Language Used:** ![c](https://github.com/user-attachments/assets/d1288ea6-d2f6-47b5-a571-40d0b61d362d) C Language
+- **Language Used:** ![c](https://github.com/user-attachments/assets/a1a7d0ce-81bc-4c66-bf3d-b9fd31e2dfc1) C Language
 - **Microcontroller:** AVR ATmega32
 - **Datasheet:** [Link to ATmega32 datasheet](https://drive.google.com/file/d/1UMuUQ7lK8PmzG-fhNcWcx1v4-HpnDq6v/view?usp=sharing)
 
