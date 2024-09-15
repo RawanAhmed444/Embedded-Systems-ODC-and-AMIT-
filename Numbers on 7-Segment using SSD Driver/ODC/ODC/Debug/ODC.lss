@@ -1,0 +1,342 @@
+
+ODC.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000000b0  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  00800060  000001a0  00000234  2**0
+                  ALLOC, LOAD, DATA
+  2 .comment      0000002f  00000000  00000000  00000234  2**0
+                  CONTENTS, READONLY
+  3 .stack.descriptors.hdr 0000000e  00000000  00000000  00000263  2**0
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000090  00000000  00000000  00000271  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00000fb4  00000000  00000000  00000301  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 0000070e  00000000  00000000  000012b5  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   000004cb  00000000  00000000  000019c3  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  000000dc  00000000  00000000  00001e90  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    00000218  00000000  00000000  00001f6c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    00000422  00000000  00000000  00002184  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000060  00000000  00000000  000025a6  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .text         00000004  00000188  00000188  0000021c  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 13 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00002608  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 14 .text.main    00000030  000000fa  000000fa  0000018e  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 15 .text.SSD_voidInit 00000008  00000180  00000180  00000214  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 16 .rodata       0000000a  00800060  00000196  0000022a  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+ 17 .text.SSD_voidDisplayNumber 0000004a  000000b0  000000b0  00000144  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 18 .text.DIO_voidSetPortDir 00000020  0000012a  0000012a  000001be  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 19 .text.DIO_voidSetPortVal 00000020  0000014a  0000014a  000001de  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 20 .text.__dummy_fini 00000002  00000190  00000190  00000224  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 21 .text.__dummy_funcs_on_exit 00000002  00000192  00000192  00000226  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 22 .text.__dummy_simulator_exit 00000002  00000194  00000194  00000228  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 23 .text.exit    00000016  0000016a  0000016a  000001fe  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 24 .text._Exit   00000004  0000018c  0000018c  00000220  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 2e 00 	jmp	0x5c	; 0x5c <__ctors_end>
+   4:	0c 94 c4 00 	jmp	0x188	; 0x188 <__bad_interrupt>
+   8:	0c 94 c4 00 	jmp	0x188	; 0x188 <__bad_interrupt>
+   c:	0c 94 c4 00 	jmp	0x188	; 0x188 <__bad_interrupt>
+  10:	0c 94 c4 00 	jmp	0x188	; 0x188 <__bad_interrupt>
+  14:	0c 94 c4 00 	jmp	0x188	; 0x188 <__bad_interrupt>
+  18:	0c 94 c4 00 	jmp	0x188	; 0x188 <__bad_interrupt>
+  1c:	0c 94 c4 00 	jmp	0x188	; 0x188 <__bad_interrupt>
+  20:	0c 94 c4 00 	jmp	0x188	; 0x188 <__bad_interrupt>
+  24:	0c 94 c4 00 	jmp	0x188	; 0x188 <__bad_interrupt>
+  28:	0c 94 c4 00 	jmp	0x188	; 0x188 <__bad_interrupt>
+  2c:	0c 94 c4 00 	jmp	0x188	; 0x188 <__bad_interrupt>
+  30:	0c 94 c4 00 	jmp	0x188	; 0x188 <__bad_interrupt>
+  34:	0c 94 c4 00 	jmp	0x188	; 0x188 <__bad_interrupt>
+  38:	0c 94 c4 00 	jmp	0x188	; 0x188 <__bad_interrupt>
+  3c:	0c 94 c4 00 	jmp	0x188	; 0x188 <__bad_interrupt>
+  40:	0c 94 c4 00 	jmp	0x188	; 0x188 <__bad_interrupt>
+  44:	0c 94 c4 00 	jmp	0x188	; 0x188 <__bad_interrupt>
+  48:	0c 94 c4 00 	jmp	0x188	; 0x188 <__bad_interrupt>
+  4c:	0c 94 c4 00 	jmp	0x188	; 0x188 <__bad_interrupt>
+  50:	0c 94 c4 00 	jmp	0x188	; 0x188 <__bad_interrupt>
+
+00000054 <.dinit>:
+  54:	00 60       	ori	r16, 0x00	; 0
+  56:	00 6a       	ori	r16, 0xA0	; 160
+  58:	00 01       	movw	r0, r0
+  5a:	96 00       	.word	0x0096	; ????
+
+0000005c <__ctors_end>:
+  5c:	11 24       	eor	r1, r1
+  5e:	1f be       	out	0x3f, r1	; 63
+  60:	cf e5       	ldi	r28, 0x5F	; 95
+  62:	d8 e0       	ldi	r29, 0x08	; 8
+  64:	de bf       	out	0x3e, r29	; 62
+  66:	cd bf       	out	0x3d, r28	; 61
+
+00000068 <__do_copy_data>:
+  68:	e4 e5       	ldi	r30, 0x54	; 84
+  6a:	f0 e0       	ldi	r31, 0x00	; 0
+  6c:	40 e0       	ldi	r20, 0x00	; 0
+  6e:	17 c0       	rjmp	.+46     	; 0x9e <__do_clear_bss+0x8>
+  70:	b5 91       	lpm	r27, Z+
+  72:	a5 91       	lpm	r26, Z+
+  74:	35 91       	lpm	r19, Z+
+  76:	25 91       	lpm	r18, Z+
+  78:	05 91       	lpm	r16, Z+
+  7a:	07 fd       	sbrc	r16, 7
+  7c:	0c c0       	rjmp	.+24     	; 0x96 <__do_clear_bss>
+  7e:	95 91       	lpm	r25, Z+
+  80:	85 91       	lpm	r24, Z+
+  82:	ef 01       	movw	r28, r30
+  84:	f9 2f       	mov	r31, r25
+  86:	e8 2f       	mov	r30, r24
+  88:	05 90       	lpm	r0, Z+
+  8a:	0d 92       	st	X+, r0
+  8c:	a2 17       	cp	r26, r18
+  8e:	b3 07       	cpc	r27, r19
+  90:	d9 f7       	brne	.-10     	; 0x88 <__do_copy_data+0x20>
+  92:	fe 01       	movw	r30, r28
+  94:	04 c0       	rjmp	.+8      	; 0x9e <__do_clear_bss+0x8>
+
+00000096 <__do_clear_bss>:
+  96:	1d 92       	st	X+, r1
+  98:	a2 17       	cp	r26, r18
+  9a:	b3 07       	cpc	r27, r19
+  9c:	e1 f7       	brne	.-8      	; 0x96 <__do_clear_bss>
+  9e:	eb 35       	cpi	r30, 0x5B	; 91
+  a0:	f4 07       	cpc	r31, r20
+  a2:	31 f7       	brne	.-52     	; 0x70 <__do_copy_data+0x8>
+  a4:	0e 94 7d 00 	call	0xfa	; 0xfa <main>
+  a8:	0c 94 b5 00 	jmp	0x16a	; 0x16a <exit>
+
+000000ac <_exit>:
+  ac:	f8 94       	cli
+
+000000ae <__stop_program>:
+  ae:	ff cf       	rjmp	.-2      	; 0xae <__stop_program>
+
+Disassembly of section .text:
+
+00000188 <__bad_interrupt>:
+ 188:	0c 94 00 00 	jmp	0	; 0x0 <__TEXT_REGION_ORIGIN__>
+
+Disassembly of section .text.main:
+
+000000fa <main>:
+#include <util/delay.h>
+
+
+int main(void) 
+{
+	SSD_voidInit(DIO_PORTD);
+  fa:	83 e0       	ldi	r24, 0x03	; 3
+  fc:	0e 94 c0 00 	call	0x180	; 0x180 <SSD_voidInit>
+	while (1)
+	{
+		for (int x = 0; x < 10; x++)
+ 100:	c0 e0       	ldi	r28, 0x00	; 0
+ 102:	d0 e0       	ldi	r29, 0x00	; 0
+ 104:	0e c0       	rjmp	.+28     	; 0x122 <main+0x28>
+		{
+			SSD_voidDisplayNumber(DIO_PORTD, x);
+ 106:	6c 2f       	mov	r22, r28
+ 108:	83 e0       	ldi	r24, 0x03	; 3
+ 10a:	0e 94 58 00 	call	0xb0	; 0xb0 <__data_load_end>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 10e:	2f ef       	ldi	r18, 0xFF	; 255
+ 110:	83 ed       	ldi	r24, 0xD3	; 211
+ 112:	90 e3       	ldi	r25, 0x30	; 48
+ 114:	21 50       	subi	r18, 0x01	; 1
+ 116:	80 40       	sbci	r24, 0x00	; 0
+ 118:	90 40       	sbci	r25, 0x00	; 0
+ 11a:	e1 f7       	brne	.-8      	; 0x114 <main+0x1a>
+ 11c:	00 c0       	rjmp	.+0      	; 0x11e <main+0x24>
+ 11e:	00 00       	nop
+int main(void) 
+{
+	SSD_voidInit(DIO_PORTD);
+	while (1)
+	{
+		for (int x = 0; x < 10; x++)
+ 120:	21 96       	adiw	r28, 0x01	; 1
+ 122:	ca 30       	cpi	r28, 0x0A	; 10
+ 124:	d1 05       	cpc	r29, r1
+ 126:	7c f3       	brlt	.-34     	; 0x106 <main+0xc>
+ 128:	eb cf       	rjmp	.-42     	; 0x100 <main+0x6>
+
+Disassembly of section .text.SSD_voidInit:
+
+00000180 <SSD_voidInit>:
+#include "../../LIB/STD_TYPE.h"
+
+
+void SSD_voidInit(u8 copy_u8port)
+{
+	DIO_voidSetPortDir(copy_u8port, 0xFF);
+ 180:	6f ef       	ldi	r22, 0xFF	; 255
+ 182:	0e 94 95 00 	call	0x12a	; 0x12a <DIO_voidSetPortDir>
+ 186:	08 95       	ret
+
+Disassembly of section .text.SSD_voidDisplayNumber:
+
+000000b0 <SSD_voidDisplayNumber>:
+}
+
+
+void SSD_voidDisplayNumber(u8 copy_u8port, u8 copy_u8number)
+{
+  b0:	cf 93       	push	r28
+  b2:	df 93       	push	r29
+  b4:	cd b7       	in	r28, 0x3d	; 61
+  b6:	de b7       	in	r29, 0x3e	; 62
+  b8:	2a 97       	sbiw	r28, 0x0a	; 10
+  ba:	0f b6       	in	r0, 0x3f	; 63
+  bc:	f8 94       	cli
+  be:	de bf       	out	0x3e, r29	; 62
+  c0:	0f be       	out	0x3f, r0	; 63
+  c2:	cd bf       	out	0x3d, r28	; 61
+	u8 arr [10] = {0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07, 0x7F, 0x6F} ;
+  c4:	9a e0       	ldi	r25, 0x0A	; 10
+  c6:	e0 e6       	ldi	r30, 0x60	; 96
+  c8:	f0 e0       	ldi	r31, 0x00	; 0
+  ca:	de 01       	movw	r26, r28
+  cc:	11 96       	adiw	r26, 0x01	; 1
+  ce:	01 90       	ld	r0, Z+
+  d0:	0d 92       	st	X+, r0
+  d2:	9a 95       	dec	r25
+  d4:	e1 f7       	brne	.-8      	; 0xce <SSD_voidDisplayNumber+0x1e>
+	DIO_voidSetPortVal(copy_u8port, arr[copy_u8number]);
+  d6:	e1 e0       	ldi	r30, 0x01	; 1
+  d8:	f0 e0       	ldi	r31, 0x00	; 0
+  da:	ec 0f       	add	r30, r28
+  dc:	fd 1f       	adc	r31, r29
+  de:	e6 0f       	add	r30, r22
+  e0:	f1 1d       	adc	r31, r1
+  e2:	60 81       	ld	r22, Z
+  e4:	0e 94 a5 00 	call	0x14a	; 0x14a <DIO_voidSetPortVal>
+}
+  e8:	2a 96       	adiw	r28, 0x0a	; 10
+  ea:	0f b6       	in	r0, 0x3f	; 63
+  ec:	f8 94       	cli
+  ee:	de bf       	out	0x3e, r29	; 62
+  f0:	0f be       	out	0x3f, r0	; 63
+  f2:	cd bf       	out	0x3d, r28	; 61
+  f4:	df 91       	pop	r29
+  f6:	cf 91       	pop	r28
+  f8:	08 95       	ret
+
+Disassembly of section .text.DIO_voidSetPortDir:
+
+0000012a <DIO_voidSetPortDir>:
+}
+
+
+void DIO_voidSetPortDir(u8 copy_u8port, u8 copy_u8dir)
+{
+	switch(copy_u8port){
+ 12a:	81 30       	cpi	r24, 0x01	; 1
+ 12c:	41 f0       	breq	.+16     	; 0x13e <DIO_voidSetPortDir+0x14>
+ 12e:	28 f0       	brcs	.+10     	; 0x13a <DIO_voidSetPortDir+0x10>
+ 130:	82 30       	cpi	r24, 0x02	; 2
+ 132:	39 f0       	breq	.+14     	; 0x142 <DIO_voidSetPortDir+0x18>
+ 134:	83 30       	cpi	r24, 0x03	; 3
+ 136:	39 f0       	breq	.+14     	; 0x146 <DIO_voidSetPortDir+0x1c>
+ 138:	08 95       	ret
+		case DIO_PORTA: DDRA_REG=copy_u8dir; break;
+ 13a:	6b bb       	out	0x1b, r22	; 27
+ 13c:	08 95       	ret
+		case DIO_PORTB: DDRB_REG=copy_u8dir; break;
+ 13e:	68 bb       	out	0x18, r22	; 24
+ 140:	08 95       	ret
+		case DIO_PORTC: DDRC_REG=copy_u8dir; break;
+ 142:	65 bb       	out	0x15, r22	; 21
+ 144:	08 95       	ret
+		case DIO_PORTD: DDRD_REG=copy_u8dir; break;
+ 146:	62 bb       	out	0x12, r22	; 18
+ 148:	08 95       	ret
+
+Disassembly of section .text.DIO_voidSetPortVal:
+
+0000014a <DIO_voidSetPortVal>:
+}
+
+
+void DIO_voidSetPortVal(u8 copy_u8port, u8 copy_u8val)
+{
+	switch(copy_u8port){
+ 14a:	81 30       	cpi	r24, 0x01	; 1
+ 14c:	41 f0       	breq	.+16     	; 0x15e <DIO_voidSetPortVal+0x14>
+ 14e:	28 f0       	brcs	.+10     	; 0x15a <DIO_voidSetPortVal+0x10>
+ 150:	82 30       	cpi	r24, 0x02	; 2
+ 152:	39 f0       	breq	.+14     	; 0x162 <DIO_voidSetPortVal+0x18>
+ 154:	83 30       	cpi	r24, 0x03	; 3
+ 156:	39 f0       	breq	.+14     	; 0x166 <DIO_voidSetPortVal+0x1c>
+ 158:	08 95       	ret
+		case DIO_PORTA: PORTA_REG=copy_u8val; break;
+ 15a:	6a bb       	out	0x1a, r22	; 26
+ 15c:	08 95       	ret
+		case DIO_PORTB: PORTB_REG=copy_u8val; break;
+ 15e:	67 bb       	out	0x17, r22	; 23
+ 160:	08 95       	ret
+		case DIO_PORTC: PORTC_REG=copy_u8val; break;
+ 162:	64 bb       	out	0x14, r22	; 20
+ 164:	08 95       	ret
+		case DIO_PORTD: PORTD_REG=copy_u8val; break;
+ 166:	61 bb       	out	0x11, r22	; 17
+ 168:	08 95       	ret
+
+Disassembly of section .text.__dummy_fini:
+
+00000190 <_fini>:
+ 190:	08 95       	ret
+
+Disassembly of section .text.__dummy_funcs_on_exit:
+
+00000192 <__funcs_on_exit>:
+ 192:	08 95       	ret
+
+Disassembly of section .text.__dummy_simulator_exit:
+
+00000194 <__simulator_exit>:
+ 194:	08 95       	ret
+
+Disassembly of section .text.exit:
+
+0000016a <exit>:
+ 16a:	ec 01       	movw	r28, r24
+ 16c:	0e 94 c9 00 	call	0x192	; 0x192 <__funcs_on_exit>
+ 170:	0e 94 c8 00 	call	0x190	; 0x190 <_fini>
+ 174:	ce 01       	movw	r24, r28
+ 176:	0e 94 ca 00 	call	0x194	; 0x194 <__simulator_exit>
+ 17a:	ce 01       	movw	r24, r28
+ 17c:	0e 94 c6 00 	call	0x18c	; 0x18c <_Exit>
+
+Disassembly of section .text._Exit:
+
+0000018c <_Exit>:
+ 18c:	0e 94 56 00 	call	0xac	; 0xac <_exit>
