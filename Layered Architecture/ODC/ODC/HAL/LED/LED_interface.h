@@ -13,10 +13,10 @@
 #define LED_INTERFACE_H_
 
 
-void LED_voidInit(u8 copy_u8port);
-void LED_voidToggle(u8 copy_u8port);
-void LED_voidOn(u8 copy_u8port);
-void LED_voidOff(u8 copy_u8port);
+void LED_voidInit(u8 copy_u8port, u8 copy_u8pin);
+void LED_voidToggle(u8 copy_u8port, u8 copy_u8pin);
+void LED_voidOn(u8 copy_u8port, u8 copy_u8pin);
+void LED_voidOff(u8 copy_u8port, u8 copy_u8pin);
 
 
 #endif /* LED_INTERFACE_H_ */

@@ -10,8 +10,6 @@
 #define LED_CONFIG_H_
 
 
-/*Define pin connection for LED*/
-#define LED_PIN DIO_PIN0
 
 
 #endif /* LED_CONFIG_H_ */

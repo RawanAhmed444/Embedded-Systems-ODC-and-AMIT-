@@ -5,85 +5,95 @@ Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
   0 .text         000000b0  00000000  00000000  00000094  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  1 .data         00000000  00800060  000001a0  00000234  2**0
+  1 .data         00000000  00800060  0000047a  0000050e  2**0
                   ALLOC, LOAD, DATA
-  2 .comment      0000002f  00000000  00000000  00000234  2**0
+  2 .comment      0000002f  00000000  00000000  0000050e  2**0
                   CONTENTS, READONLY
-  3 .stack.descriptors.hdr 0000000e  00000000  00000000  00000263  2**0
+  3 .stack.descriptors.hdr 0000000e  00000000  00000000  0000053d  2**0
                   CONTENTS, READONLY
-  4 .debug_aranges 00000090  00000000  00000000  00000271  2**0
+  4 .debug_aranges 000000d0  00000000  00000000  0000054b  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .debug_info   00000fb4  00000000  00000000  00000301  2**0
+  5 .debug_info   00001722  00000000  00000000  0000061b  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_abbrev 0000070e  00000000  00000000  000012b5  2**0
+  6 .debug_abbrev 000007a8  00000000  00000000  00001d3d  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_line   000004cb  00000000  00000000  000019c3  2**0
+  7 .debug_line   00000705  00000000  00000000  000024e5  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_frame  000000dc  00000000  00000000  00001e90  2**2
+  8 .debug_frame  00000150  00000000  00000000  00002bec  2**2
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_str    00000218  00000000  00000000  00001f6c  2**0
+  9 .debug_str    000002a1  00000000  00000000  00002d3c  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_loc    00000422  00000000  00000000  00002184  2**0
+ 10 .debug_loc    000006e1  00000000  00000000  00002fdd  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_ranges 00000060  00000000  00000000  000025a6  2**0
+ 11 .debug_ranges 00000090  00000000  00000000  000036be  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .text         00000004  00000188  00000188  0000021c  2**1
+ 12 .text         00000004  00000458  00000458  000004ec  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 13 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00002608  2**2
+ 13 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00003750  2**2
                   CONTENTS, READONLY, DEBUGGING
- 14 .text.main    00000030  000000fa  000000fa  0000018e  2**1
+ 14 .text.main    00000128  000000b0  000000b0  00000144  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 15 .text.SSD_voidInit 00000008  00000180  00000180  00000214  2**1
+ 15 .text.LED_voidInit 00000008  00000438  00000438  000004cc  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 16 .rodata       0000000a  00800060  00000196  0000022a  2**0
+ 16 .text.LED_voidOn 00000008  00000440  00000440  000004d4  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 17 .text.LED_voidOff 00000008  00000448  00000448  000004dc  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 18 .text.SSD_voidInit 00000008  00000450  00000450  000004e4  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 19 .rodata       00000014  00800060  00000466  000004fa  2**0
                   CONTENTS, ALLOC, LOAD, DATA
- 17 .text.SSD_voidDisplayNumber 0000004a  000000b0  000000b0  00000144  2**1
+ 20 .text.SSD_voidDisplayNumberDescending 0000004a  00000398  00000398  0000042c  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 18 .text.DIO_voidSetPortDir 00000020  0000012a  0000012a  000001be  2**1
+ 21 .text.DIO_voidSetPinDir 000000e0  000001d8  000001d8  0000026c  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 19 .text.DIO_voidSetPortVal 00000020  0000014a  0000014a  000001de  2**1
+ 22 .text.DIO_voidSetPinVal 000000e0  000002b8  000002b8  0000034c  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 20 .text.__dummy_fini 00000002  00000190  00000190  00000224  2**1
+ 23 .text.DIO_voidSetPortDir 00000020  000003e2  000003e2  00000476  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 21 .text.__dummy_funcs_on_exit 00000002  00000192  00000192  00000226  2**1
+ 24 .text.DIO_voidSetPortVal 00000020  00000402  00000402  00000496  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 22 .text.__dummy_simulator_exit 00000002  00000194  00000194  00000228  2**1
+ 25 .text.__dummy_fini 00000002  00000460  00000460  000004f4  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 23 .text.exit    00000016  0000016a  0000016a  000001fe  2**1
+ 26 .text.__dummy_funcs_on_exit 00000002  00000462  00000462  000004f6  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 24 .text._Exit   00000004  0000018c  0000018c  00000220  2**1
+ 27 .text.__dummy_simulator_exit 00000002  00000464  00000464  000004f8  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 28 .text.exit    00000016  00000422  00000422  000004b6  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+ 29 .text._Exit   00000004  0000045c  0000045c  000004f0  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
 
 Disassembly of section .text:
 
 00000000 <__vectors>:
    0:	0c 94 2e 00 	jmp	0x5c	; 0x5c <__ctors_end>
-   4:	0c 94 c4 00 	jmp	0x188	; 0x188 <__bad_interrupt>
-   8:	0c 94 c4 00 	jmp	0x188	; 0x188 <__bad_interrupt>
-   c:	0c 94 c4 00 	jmp	0x188	; 0x188 <__bad_interrupt>
-  10:	0c 94 c4 00 	jmp	0x188	; 0x188 <__bad_interrupt>
-  14:	0c 94 c4 00 	jmp	0x188	; 0x188 <__bad_interrupt>
-  18:	0c 94 c4 00 	jmp	0x188	; 0x188 <__bad_interrupt>
-  1c:	0c 94 c4 00 	jmp	0x188	; 0x188 <__bad_interrupt>
-  20:	0c 94 c4 00 	jmp	0x188	; 0x188 <__bad_interrupt>
-  24:	0c 94 c4 00 	jmp	0x188	; 0x188 <__bad_interrupt>
-  28:	0c 94 c4 00 	jmp	0x188	; 0x188 <__bad_interrupt>
-  2c:	0c 94 c4 00 	jmp	0x188	; 0x188 <__bad_interrupt>
-  30:	0c 94 c4 00 	jmp	0x188	; 0x188 <__bad_interrupt>
-  34:	0c 94 c4 00 	jmp	0x188	; 0x188 <__bad_interrupt>
-  38:	0c 94 c4 00 	jmp	0x188	; 0x188 <__bad_interrupt>
-  3c:	0c 94 c4 00 	jmp	0x188	; 0x188 <__bad_interrupt>
-  40:	0c 94 c4 00 	jmp	0x188	; 0x188 <__bad_interrupt>
-  44:	0c 94 c4 00 	jmp	0x188	; 0x188 <__bad_interrupt>
-  48:	0c 94 c4 00 	jmp	0x188	; 0x188 <__bad_interrupt>
-  4c:	0c 94 c4 00 	jmp	0x188	; 0x188 <__bad_interrupt>
-  50:	0c 94 c4 00 	jmp	0x188	; 0x188 <__bad_interrupt>
+   4:	0c 94 2c 02 	jmp	0x458	; 0x458 <__bad_interrupt>
+   8:	0c 94 2c 02 	jmp	0x458	; 0x458 <__bad_interrupt>
+   c:	0c 94 2c 02 	jmp	0x458	; 0x458 <__bad_interrupt>
+  10:	0c 94 2c 02 	jmp	0x458	; 0x458 <__bad_interrupt>
+  14:	0c 94 2c 02 	jmp	0x458	; 0x458 <__bad_interrupt>
+  18:	0c 94 2c 02 	jmp	0x458	; 0x458 <__bad_interrupt>
+  1c:	0c 94 2c 02 	jmp	0x458	; 0x458 <__bad_interrupt>
+  20:	0c 94 2c 02 	jmp	0x458	; 0x458 <__bad_interrupt>
+  24:	0c 94 2c 02 	jmp	0x458	; 0x458 <__bad_interrupt>
+  28:	0c 94 2c 02 	jmp	0x458	; 0x458 <__bad_interrupt>
+  2c:	0c 94 2c 02 	jmp	0x458	; 0x458 <__bad_interrupt>
+  30:	0c 94 2c 02 	jmp	0x458	; 0x458 <__bad_interrupt>
+  34:	0c 94 2c 02 	jmp	0x458	; 0x458 <__bad_interrupt>
+  38:	0c 94 2c 02 	jmp	0x458	; 0x458 <__bad_interrupt>
+  3c:	0c 94 2c 02 	jmp	0x458	; 0x458 <__bad_interrupt>
+  40:	0c 94 2c 02 	jmp	0x458	; 0x458 <__bad_interrupt>
+  44:	0c 94 2c 02 	jmp	0x458	; 0x458 <__bad_interrupt>
+  48:	0c 94 2c 02 	jmp	0x458	; 0x458 <__bad_interrupt>
+  4c:	0c 94 2c 02 	jmp	0x458	; 0x458 <__bad_interrupt>
+  50:	0c 94 2c 02 	jmp	0x458	; 0x458 <__bad_interrupt>
 
 00000054 <.dinit>:
   54:	00 60       	ori	r16, 0x00	; 0
-  56:	00 6a       	ori	r16, 0xA0	; 160
-  58:	00 01       	movw	r0, r0
-  5a:	96 00       	.word	0x0096	; ????
+  56:	00 74       	andi	r16, 0x40	; 64
+  58:	00 04       	cpc	r0, r0
+  5a:	66 00       	.word	0x0066	; ????
 
 0000005c <__ctors_end>:
   5c:	11 24       	eor	r1, r1
@@ -126,8 +136,8 @@ Disassembly of section .text:
   9e:	eb 35       	cpi	r30, 0x5B	; 91
   a0:	f4 07       	cpc	r31, r20
   a2:	31 f7       	brne	.-52     	; 0x70 <__do_copy_data+0x8>
-  a4:	0e 94 7d 00 	call	0xfa	; 0xfa <main>
-  a8:	0c 94 b5 00 	jmp	0x16a	; 0x16a <exit>
+  a4:	0e 94 58 00 	call	0xb0	; 0xb0 <_etext>
+  a8:	0c 94 11 02 	jmp	0x422	; 0x422 <exit>
 
 000000ac <_exit>:
   ac:	f8 94       	cli
@@ -137,206 +147,650 @@ Disassembly of section .text:
 
 Disassembly of section .text:
 
-00000188 <__bad_interrupt>:
- 188:	0c 94 00 00 	jmp	0	; 0x0 <__TEXT_REGION_ORIGIN__>
+00000458 <__bad_interrupt>:
+ 458:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
 
 Disassembly of section .text.main:
 
-000000fa <main>:
-#include <util/delay.h>
+000000b0 <main>:
 
 
-int main(void) 
+int main(void)
 {
+	/*Initializing 3 LEDs and 2 7-Segment Displays*/
+	LED_voidInit(DIO_PORTA, DIO_PIN0);
+  b0:	60 e0       	ldi	r22, 0x00	; 0
+  b2:	80 e0       	ldi	r24, 0x00	; 0
+  b4:	0e 94 1c 02 	call	0x438	; 0x438 <LED_voidInit>
+	LED_voidInit(DIO_PORTA, DIO_PIN1);
+  b8:	61 e0       	ldi	r22, 0x01	; 1
+  ba:	80 e0       	ldi	r24, 0x00	; 0
+  bc:	0e 94 1c 02 	call	0x438	; 0x438 <LED_voidInit>
+	LED_voidInit(DIO_PORTA, DIO_PIN2);
+  c0:	62 e0       	ldi	r22, 0x02	; 2
+  c2:	80 e0       	ldi	r24, 0x00	; 0
+  c4:	0e 94 1c 02 	call	0x438	; 0x438 <LED_voidInit>
+	SSD_voidInit(DIO_PORTC);
+  c8:	82 e0       	ldi	r24, 0x02	; 2
+  ca:	0e 94 28 02 	call	0x450	; 0x450 <SSD_voidInit>
 	SSD_voidInit(DIO_PORTD);
-  fa:	83 e0       	ldi	r24, 0x03	; 3
-  fc:	0e 94 c0 00 	call	0x180	; 0x180 <SSD_voidInit>
-	while (1)
-	{
-		for (int x = 0; x < 10; x++)
- 100:	c0 e0       	ldi	r28, 0x00	; 0
- 102:	d0 e0       	ldi	r29, 0x00	; 0
- 104:	0e c0       	rjmp	.+28     	; 0x122 <main+0x28>
-		{
-			SSD_voidDisplayNumber(DIO_PORTD, x);
- 106:	6c 2f       	mov	r22, r28
- 108:	83 e0       	ldi	r24, 0x03	; 3
- 10a:	0e 94 58 00 	call	0xb0	; 0xb0 <__data_load_end>
+  ce:	83 e0       	ldi	r24, 0x03	; 3
+  d0:	0e 94 28 02 	call	0x450	; 0x450 <SSD_voidInit>
+	
+			
+    while(1)
+    {		
+         /*lightening green led while counting 10 seconds down on two 7-segments displays*/
+         for (u8 x = 0; x < 10; x++)
+  d4:	c0 e0       	ldi	r28, 0x00	; 0
+  d6:	2d c0       	rjmp	.+90     	; 0x132 <main+0x82>
+         {
+			 
+			 LED_voidOn(DIO_PORTA, DIO_PIN2);	//Setting PINA2 HIGH
+  d8:	62 e0       	ldi	r22, 0x02	; 2
+  da:	80 e0       	ldi	r24, 0x00	; 0
+  dc:	0e 94 20 02 	call	0x440	; 0x440 <LED_voidOn>
+			 while (x == 0)		//Counting number 10
+  e0:	c1 11       	cpse	r28, r1
+  e2:	11 c0       	rjmp	.+34     	; 0x106 <main+0x56>
+			 {
+				 SSD_voidDisplayNumberDescending(DIO_PORTC, 9);
+  e4:	69 e0       	ldi	r22, 0x09	; 9
+  e6:	82 e0       	ldi	r24, 0x02	; 2
+  e8:	0e 94 cc 01 	call	0x398	; 0x398 <SSD_voidDisplayNumberDescending>
+				 SSD_voidDisplayNumberDescending(DIO_PORTD, 8);
+  ec:	68 e0       	ldi	r22, 0x08	; 8
+  ee:	83 e0       	ldi	r24, 0x03	; 3
+  f0:	0e 94 cc 01 	call	0x398	; 0x398 <SSD_voidDisplayNumberDescending>
 	#else
 		//round up by default
 		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
 	#endif
 
 	__builtin_avr_delay_cycles(__ticks_dc);
- 10e:	2f ef       	ldi	r18, 0xFF	; 255
- 110:	83 ed       	ldi	r24, 0xD3	; 211
- 112:	90 e3       	ldi	r25, 0x30	; 48
- 114:	21 50       	subi	r18, 0x01	; 1
- 116:	80 40       	sbci	r24, 0x00	; 0
- 118:	90 40       	sbci	r25, 0x00	; 0
- 11a:	e1 f7       	brne	.-8      	; 0x114 <main+0x1a>
- 11c:	00 c0       	rjmp	.+0      	; 0x11e <main+0x24>
- 11e:	00 00       	nop
-int main(void) 
+  f4:	2f ef       	ldi	r18, 0xFF	; 255
+  f6:	89 e6       	ldi	r24, 0x69	; 105
+  f8:	98 e1       	ldi	r25, 0x18	; 24
+  fa:	21 50       	subi	r18, 0x01	; 1
+  fc:	80 40       	sbci	r24, 0x00	; 0
+  fe:	90 40       	sbci	r25, 0x00	; 0
+ 100:	e1 f7       	brne	.-8      	; 0xfa <main+0x4a>
+ 102:	00 c0       	rjmp	.+0      	; 0x104 <main+0x54>
+ 104:	00 00       	nop
+				 _delay_ms(500) ;
+				 break ;
+			 }
+			 SSD_voidDisplayNumberDescending(DIO_PORTC, x);
+ 106:	6c 2f       	mov	r22, r28
+ 108:	82 e0       	ldi	r24, 0x02	; 2
+ 10a:	0e 94 cc 01 	call	0x398	; 0x398 <SSD_voidDisplayNumberDescending>
+			 SSD_voidDisplayNumberDescending(DIO_PORTD, 9);
+ 10e:	69 e0       	ldi	r22, 0x09	; 9
+ 110:	83 e0       	ldi	r24, 0x03	; 3
+ 112:	0e 94 cc 01 	call	0x398	; 0x398 <SSD_voidDisplayNumberDescending>
+ 116:	2f ef       	ldi	r18, 0xFF	; 255
+ 118:	89 e6       	ldi	r24, 0x69	; 105
+ 11a:	98 e1       	ldi	r25, 0x18	; 24
+ 11c:	21 50       	subi	r18, 0x01	; 1
+ 11e:	80 40       	sbci	r24, 0x00	; 0
+ 120:	90 40       	sbci	r25, 0x00	; 0
+ 122:	e1 f7       	brne	.-8      	; 0x11c <main+0x6c>
+ 124:	00 c0       	rjmp	.+0      	; 0x126 <main+0x76>
+ 126:	00 00       	nop
+			 _delay_ms(500) ;
+			 LED_voidOff(DIO_PORTA, DIO_PIN2);	//Setting PINA2 LOW
+ 128:	62 e0       	ldi	r22, 0x02	; 2
+ 12a:	80 e0       	ldi	r24, 0x00	; 0
+ 12c:	0e 94 24 02 	call	0x448	; 0x448 <LED_voidOff>
+	
+			
+    while(1)
+    {		
+         /*lightening green led while counting 10 seconds down on two 7-segments displays*/
+         for (u8 x = 0; x < 10; x++)
+ 130:	cf 5f       	subi	r28, 0xFF	; 255
+ 132:	ca 30       	cpi	r28, 0x0A	; 10
+ 134:	88 f2       	brcs	.-94     	; 0xd8 <main+0x28>
+ 136:	c0 e0       	ldi	r28, 0x00	; 0
+ 138:	1b c0       	rjmp	.+54     	; 0x170 <main+0xc0>
+         }
+		 /*lightening yellow led while counting 3 seconds down on two 7-segments displays*/
+		 for (u8 x = 0; x < 3; x++)
+		 {
+			 
+			 LED_voidOn(DIO_PORTA, DIO_PIN1);	//Setting PINA1 HIGH
+ 13a:	61 e0       	ldi	r22, 0x01	; 1
+ 13c:	80 e0       	ldi	r24, 0x00	; 0
+ 13e:	0e 94 20 02 	call	0x440	; 0x440 <LED_voidOn>
+			 SSD_voidDisplayNumberDescending(DIO_PORTC, x+6);
+ 142:	66 e0       	ldi	r22, 0x06	; 6
+ 144:	6c 0f       	add	r22, r28
+ 146:	82 e0       	ldi	r24, 0x02	; 2
+ 148:	0e 94 cc 01 	call	0x398	; 0x398 <SSD_voidDisplayNumberDescending>
+			 SSD_voidDisplayNumberDescending(DIO_PORTD, 9);
+ 14c:	69 e0       	ldi	r22, 0x09	; 9
+ 14e:	83 e0       	ldi	r24, 0x03	; 3
+ 150:	0e 94 cc 01 	call	0x398	; 0x398 <SSD_voidDisplayNumberDescending>
+ 154:	2f ef       	ldi	r18, 0xFF	; 255
+ 156:	89 e6       	ldi	r24, 0x69	; 105
+ 158:	98 e1       	ldi	r25, 0x18	; 24
+ 15a:	21 50       	subi	r18, 0x01	; 1
+ 15c:	80 40       	sbci	r24, 0x00	; 0
+ 15e:	90 40       	sbci	r25, 0x00	; 0
+ 160:	e1 f7       	brne	.-8      	; 0x15a <main+0xaa>
+ 162:	00 c0       	rjmp	.+0      	; 0x164 <main+0xb4>
+ 164:	00 00       	nop
+			 _delay_ms(500) ;
+			 while (x == 8)		//When reaching 3 break the loop
+			 {
+				 break ;
+			 }
+			 LED_voidOff(DIO_PORTA, DIO_PIN1);	//Setting PINA1 LOW
+ 166:	61 e0       	ldi	r22, 0x01	; 1
+ 168:	80 e0       	ldi	r24, 0x00	; 0
+ 16a:	0e 94 24 02 	call	0x448	; 0x448 <LED_voidOff>
+			 SSD_voidDisplayNumberDescending(DIO_PORTD, 9);
+			 _delay_ms(500) ;
+			 LED_voidOff(DIO_PORTA, DIO_PIN2);	//Setting PINA2 LOW
+         }
+		 /*lightening yellow led while counting 3 seconds down on two 7-segments displays*/
+		 for (u8 x = 0; x < 3; x++)
+ 16e:	cf 5f       	subi	r28, 0xFF	; 255
+ 170:	c3 30       	cpi	r28, 0x03	; 3
+ 172:	18 f3       	brcs	.-58     	; 0x13a <main+0x8a>
+ 174:	c0 e0       	ldi	r28, 0x00	; 0
+ 176:	2d c0       	rjmp	.+90     	; 0x1d2 <main+0x122>
+		 }
+		 /*lightening red led while counting 10 seconds down on two 7-segments displays*/
+		 for (u8 x = 0; x < 10; x++)
+		 {
+			 
+			 LED_voidOn(DIO_PORTA, DIO_PIN0);	//Setting PINA0 HIGH
+ 178:	60 e0       	ldi	r22, 0x00	; 0
+ 17a:	80 e0       	ldi	r24, 0x00	; 0
+ 17c:	0e 94 20 02 	call	0x440	; 0x440 <LED_voidOn>
+			 while (x == 0)		//Counting number 10
+ 180:	c1 11       	cpse	r28, r1
+ 182:	11 c0       	rjmp	.+34     	; 0x1a6 <main+0xf6>
+			 {
+				 SSD_voidDisplayNumberDescending(DIO_PORTC, 9);
+ 184:	69 e0       	ldi	r22, 0x09	; 9
+ 186:	82 e0       	ldi	r24, 0x02	; 2
+ 188:	0e 94 cc 01 	call	0x398	; 0x398 <SSD_voidDisplayNumberDescending>
+				 SSD_voidDisplayNumberDescending(DIO_PORTD, 8);
+ 18c:	68 e0       	ldi	r22, 0x08	; 8
+ 18e:	83 e0       	ldi	r24, 0x03	; 3
+ 190:	0e 94 cc 01 	call	0x398	; 0x398 <SSD_voidDisplayNumberDescending>
+ 194:	2f ef       	ldi	r18, 0xFF	; 255
+ 196:	89 e6       	ldi	r24, 0x69	; 105
+ 198:	98 e1       	ldi	r25, 0x18	; 24
+ 19a:	21 50       	subi	r18, 0x01	; 1
+ 19c:	80 40       	sbci	r24, 0x00	; 0
+ 19e:	90 40       	sbci	r25, 0x00	; 0
+ 1a0:	e1 f7       	brne	.-8      	; 0x19a <main+0xea>
+ 1a2:	00 c0       	rjmp	.+0      	; 0x1a4 <main+0xf4>
+ 1a4:	00 00       	nop
+				 _delay_ms(500) ;
+				 break ;
+			 }
+			 SSD_voidDisplayNumberDescending(DIO_PORTC, x);
+ 1a6:	6c 2f       	mov	r22, r28
+ 1a8:	82 e0       	ldi	r24, 0x02	; 2
+ 1aa:	0e 94 cc 01 	call	0x398	; 0x398 <SSD_voidDisplayNumberDescending>
+			 SSD_voidDisplayNumberDescending(DIO_PORTD, 9);
+ 1ae:	69 e0       	ldi	r22, 0x09	; 9
+ 1b0:	83 e0       	ldi	r24, 0x03	; 3
+ 1b2:	0e 94 cc 01 	call	0x398	; 0x398 <SSD_voidDisplayNumberDescending>
+ 1b6:	2f ef       	ldi	r18, 0xFF	; 255
+ 1b8:	89 e6       	ldi	r24, 0x69	; 105
+ 1ba:	98 e1       	ldi	r25, 0x18	; 24
+ 1bc:	21 50       	subi	r18, 0x01	; 1
+ 1be:	80 40       	sbci	r24, 0x00	; 0
+ 1c0:	90 40       	sbci	r25, 0x00	; 0
+ 1c2:	e1 f7       	brne	.-8      	; 0x1bc <main+0x10c>
+ 1c4:	00 c0       	rjmp	.+0      	; 0x1c6 <main+0x116>
+ 1c6:	00 00       	nop
+			 _delay_ms(500) ;
+			 LED_voidOff(DIO_PORTA, DIO_PIN0);	//Setting PINA2 LOW
+ 1c8:	60 e0       	ldi	r22, 0x00	; 0
+ 1ca:	80 e0       	ldi	r24, 0x00	; 0
+ 1cc:	0e 94 24 02 	call	0x448	; 0x448 <LED_voidOff>
+				 break ;
+			 }
+			 LED_voidOff(DIO_PORTA, DIO_PIN1);	//Setting PINA1 LOW
+		 }
+		 /*lightening red led while counting 10 seconds down on two 7-segments displays*/
+		 for (u8 x = 0; x < 10; x++)
+ 1d0:	cf 5f       	subi	r28, 0xFF	; 255
+ 1d2:	ca 30       	cpi	r28, 0x0A	; 10
+ 1d4:	88 f2       	brcs	.-94     	; 0x178 <main+0xc8>
+ 1d6:	7e cf       	rjmp	.-260    	; 0xd4 <main+0x24>
+
+Disassembly of section .text.LED_voidInit:
+
+00000438 <LED_voidInit>:
+}
+
+
+void LED_voidToggle(u8 copy_u8port, u8 copy_u8pin)
 {
-	SSD_voidInit(DIO_PORTD);
-	while (1)
-	{
-		for (int x = 0; x < 10; x++)
- 120:	21 96       	adiw	r28, 0x01	; 1
- 122:	ca 30       	cpi	r28, 0x0A	; 10
- 124:	d1 05       	cpc	r29, r1
- 126:	7c f3       	brlt	.-34     	; 0x106 <main+0xc>
- 128:	eb cf       	rjmp	.-42     	; 0x100 <main+0x6>
+	DIO_voidTogglePin(copy_u8port, copy_u8pin);
+ 438:	41 e0       	ldi	r20, 0x01	; 1
+ 43a:	0e 94 ec 00 	call	0x1d8	; 0x1d8 <DIO_voidSetPinDir>
+ 43e:	08 95       	ret
+
+Disassembly of section .text.LED_voidOn:
+
+00000440 <LED_voidOn>:
+}
+
+
+void LED_voidOn(u8 copy_u8port, u8 copy_u8pin)
+{
+	DIO_voidSetPinVal(copy_u8port, copy_u8pin, HIGH);
+ 440:	41 e0       	ldi	r20, 0x01	; 1
+ 442:	0e 94 5c 01 	call	0x2b8	; 0x2b8 <DIO_voidSetPinVal>
+ 446:	08 95       	ret
+
+Disassembly of section .text.LED_voidOff:
+
+00000448 <LED_voidOff>:
+}
+
+
+void LED_voidOff(u8 copy_u8port, u8 copy_u8pin)
+{
+	DIO_voidSetPinVal(copy_u8port, copy_u8pin, LOW);
+ 448:	40 e0       	ldi	r20, 0x00	; 0
+ 44a:	0e 94 5c 01 	call	0x2b8	; 0x2b8 <DIO_voidSetPinVal>
+ 44e:	08 95       	ret
 
 Disassembly of section .text.SSD_voidInit:
 
-00000180 <SSD_voidInit>:
-#include "../../LIB/STD_TYPE.h"
+00000450 <SSD_voidInit>:
 
 
 void SSD_voidInit(u8 copy_u8port)
 {
+	//Set the whole PORT as OUTPUT
 	DIO_voidSetPortDir(copy_u8port, 0xFF);
- 180:	6f ef       	ldi	r22, 0xFF	; 255
- 182:	0e 94 95 00 	call	0x12a	; 0x12a <DIO_voidSetPortDir>
- 186:	08 95       	ret
+ 450:	6f ef       	ldi	r22, 0xFF	; 255
+ 452:	0e 94 f1 01 	call	0x3e2	; 0x3e2 <DIO_voidSetPortDir>
+ 456:	08 95       	ret
 
-Disassembly of section .text.SSD_voidDisplayNumber:
+Disassembly of section .text.SSD_voidDisplayNumberDescending:
 
-000000b0 <SSD_voidDisplayNumber>:
-}
-
-
-void SSD_voidDisplayNumber(u8 copy_u8port, u8 copy_u8number)
-{
-  b0:	cf 93       	push	r28
-  b2:	df 93       	push	r29
-  b4:	cd b7       	in	r28, 0x3d	; 61
-  b6:	de b7       	in	r29, 0x3e	; 62
-  b8:	2a 97       	sbiw	r28, 0x0a	; 10
-  ba:	0f b6       	in	r0, 0x3f	; 63
-  bc:	f8 94       	cli
-  be:	de bf       	out	0x3e, r29	; 62
-  c0:	0f be       	out	0x3f, r0	; 63
-  c2:	cd bf       	out	0x3d, r28	; 61
-	u8 arr [10] = {0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07, 0x7F, 0x6F} ;
-  c4:	9a e0       	ldi	r25, 0x0A	; 10
-  c6:	e0 e6       	ldi	r30, 0x60	; 96
-  c8:	f0 e0       	ldi	r31, 0x00	; 0
-  ca:	de 01       	movw	r26, r28
-  cc:	11 96       	adiw	r26, 0x01	; 1
-  ce:	01 90       	ld	r0, Z+
-  d0:	0d 92       	st	X+, r0
-  d2:	9a 95       	dec	r25
-  d4:	e1 f7       	brne	.-8      	; 0xce <SSD_voidDisplayNumber+0x1e>
+00000398 <SSD_voidDisplayNumberDescending>:
 	DIO_voidSetPortVal(copy_u8port, arr[copy_u8number]);
-  d6:	e1 e0       	ldi	r30, 0x01	; 1
-  d8:	f0 e0       	ldi	r31, 0x00	; 0
-  da:	ec 0f       	add	r30, r28
-  dc:	fd 1f       	adc	r31, r29
-  de:	e6 0f       	add	r30, r22
-  e0:	f1 1d       	adc	r31, r1
-  e2:	60 81       	ld	r22, Z
-  e4:	0e 94 a5 00 	call	0x14a	; 0x14a <DIO_voidSetPortVal>
 }
-  e8:	2a 96       	adiw	r28, 0x0a	; 10
-  ea:	0f b6       	in	r0, 0x3f	; 63
-  ec:	f8 94       	cli
-  ee:	de bf       	out	0x3e, r29	; 62
-  f0:	0f be       	out	0x3f, r0	; 63
-  f2:	cd bf       	out	0x3d, r28	; 61
-  f4:	df 91       	pop	r29
-  f6:	cf 91       	pop	r28
-  f8:	08 95       	ret
+
+
+void SSD_voidDisplayNumberDescending(u8 copy_u8port, u8 copy_u8number)
+{
+ 398:	cf 93       	push	r28
+ 39a:	df 93       	push	r29
+ 39c:	cd b7       	in	r28, 0x3d	; 61
+ 39e:	de b7       	in	r29, 0x3e	; 62
+ 3a0:	2a 97       	sbiw	r28, 0x0a	; 10
+ 3a2:	0f b6       	in	r0, 0x3f	; 63
+ 3a4:	f8 94       	cli
+ 3a6:	de bf       	out	0x3e, r29	; 62
+ 3a8:	0f be       	out	0x3f, r0	; 63
+ 3aa:	cd bf       	out	0x3d, r28	; 61
+	u8 arr [10] = {0x6F, 0x7F, 0x07, 0x7D, 0x6D, 0x66, 0x4F, 0x5B, 0x06, 0x3F};
+ 3ac:	9a e0       	ldi	r25, 0x0A	; 10
+ 3ae:	ea e6       	ldi	r30, 0x6A	; 106
+ 3b0:	f0 e0       	ldi	r31, 0x00	; 0
+ 3b2:	de 01       	movw	r26, r28
+ 3b4:	11 96       	adiw	r26, 0x01	; 1
+ 3b6:	01 90       	ld	r0, Z+
+ 3b8:	0d 92       	st	X+, r0
+ 3ba:	9a 95       	dec	r25
+ 3bc:	e1 f7       	brne	.-8      	; 0x3b6 <SSD_voidDisplayNumberDescending+0x1e>
+	DIO_voidSetPortVal(copy_u8port, arr[copy_u8number]);
+ 3be:	e1 e0       	ldi	r30, 0x01	; 1
+ 3c0:	f0 e0       	ldi	r31, 0x00	; 0
+ 3c2:	ec 0f       	add	r30, r28
+ 3c4:	fd 1f       	adc	r31, r29
+ 3c6:	e6 0f       	add	r30, r22
+ 3c8:	f1 1d       	adc	r31, r1
+ 3ca:	60 81       	ld	r22, Z
+ 3cc:	0e 94 01 02 	call	0x402	; 0x402 <DIO_voidSetPortVal>
+}
+ 3d0:	2a 96       	adiw	r28, 0x0a	; 10
+ 3d2:	0f b6       	in	r0, 0x3f	; 63
+ 3d4:	f8 94       	cli
+ 3d6:	de bf       	out	0x3e, r29	; 62
+ 3d8:	0f be       	out	0x3f, r0	; 63
+ 3da:	cd bf       	out	0x3d, r28	; 61
+ 3dc:	df 91       	pop	r29
+ 3de:	cf 91       	pop	r28
+ 3e0:	08 95       	ret
+
+Disassembly of section .text.DIO_voidSetPinDir:
+
+000001d8 <DIO_voidSetPinDir>:
+		case DIO_PORTB: LOC_u8val=GET_BIT(PINB_REG, copy_u8pin); break;
+		case DIO_PORTC: LOC_u8val=GET_BIT(PINC_REG, copy_u8pin); break;
+		case DIO_PORTD: LOC_u8val=GET_BIT(PIND_REG, copy_u8pin); break;
+	}
+	return LOC_u8val;
+}
+ 1d8:	41 30       	cpi	r20, 0x01	; 1
+ 1da:	a1 f5       	brne	.+104    	; 0x244 <DIO_voidSetPinDir+0x6c>
+ 1dc:	81 30       	cpi	r24, 0x01	; 1
+ 1de:	89 f0       	breq	.+34     	; 0x202 <DIO_voidSetPinDir+0x2a>
+ 1e0:	28 f0       	brcs	.+10     	; 0x1ec <DIO_voidSetPinDir+0x14>
+ 1e2:	82 30       	cpi	r24, 0x02	; 2
+ 1e4:	c9 f0       	breq	.+50     	; 0x218 <DIO_voidSetPinDir+0x40>
+ 1e6:	83 30       	cpi	r24, 0x03	; 3
+ 1e8:	11 f1       	breq	.+68     	; 0x22e <DIO_voidSetPinDir+0x56>
+ 1ea:	08 95       	ret
+ 1ec:	2b b3       	in	r18, 0x1b	; 27
+ 1ee:	81 e0       	ldi	r24, 0x01	; 1
+ 1f0:	90 e0       	ldi	r25, 0x00	; 0
+ 1f2:	02 c0       	rjmp	.+4      	; 0x1f8 <DIO_voidSetPinDir+0x20>
+ 1f4:	88 0f       	add	r24, r24
+ 1f6:	99 1f       	adc	r25, r25
+ 1f8:	6a 95       	dec	r22
+ 1fa:	e2 f7       	brpl	.-8      	; 0x1f4 <DIO_voidSetPinDir+0x1c>
+ 1fc:	82 2b       	or	r24, r18
+ 1fe:	8b bb       	out	0x1b, r24	; 27
+ 200:	08 95       	ret
+ 202:	28 b3       	in	r18, 0x18	; 24
+ 204:	81 e0       	ldi	r24, 0x01	; 1
+ 206:	90 e0       	ldi	r25, 0x00	; 0
+ 208:	02 c0       	rjmp	.+4      	; 0x20e <DIO_voidSetPinDir+0x36>
+ 20a:	88 0f       	add	r24, r24
+ 20c:	99 1f       	adc	r25, r25
+ 20e:	6a 95       	dec	r22
+ 210:	e2 f7       	brpl	.-8      	; 0x20a <DIO_voidSetPinDir+0x32>
+ 212:	82 2b       	or	r24, r18
+ 214:	88 bb       	out	0x18, r24	; 24
+ 216:	08 95       	ret
+ 218:	25 b3       	in	r18, 0x15	; 21
+ 21a:	81 e0       	ldi	r24, 0x01	; 1
+ 21c:	90 e0       	ldi	r25, 0x00	; 0
+ 21e:	02 c0       	rjmp	.+4      	; 0x224 <DIO_voidSetPinDir+0x4c>
+ 220:	88 0f       	add	r24, r24
+ 222:	99 1f       	adc	r25, r25
+ 224:	6a 95       	dec	r22
+ 226:	e2 f7       	brpl	.-8      	; 0x220 <DIO_voidSetPinDir+0x48>
+ 228:	82 2b       	or	r24, r18
+ 22a:	85 bb       	out	0x15, r24	; 21
+ 22c:	08 95       	ret
+ 22e:	22 b3       	in	r18, 0x12	; 18
+ 230:	81 e0       	ldi	r24, 0x01	; 1
+ 232:	90 e0       	ldi	r25, 0x00	; 0
+ 234:	02 c0       	rjmp	.+4      	; 0x23a <DIO_voidSetPinDir+0x62>
+ 236:	88 0f       	add	r24, r24
+ 238:	99 1f       	adc	r25, r25
+ 23a:	6a 95       	dec	r22
+ 23c:	e2 f7       	brpl	.-8      	; 0x236 <DIO_voidSetPinDir+0x5e>
+ 23e:	82 2b       	or	r24, r18
+ 240:	82 bb       	out	0x12, r24	; 18
+ 242:	08 95       	ret
+ 244:	41 11       	cpse	r20, r1
+ 246:	37 c0       	rjmp	.+110    	; 0x2b6 <DIO_voidSetPinDir+0xde>
+ 248:	81 30       	cpi	r24, 0x01	; 1
+ 24a:	91 f0       	breq	.+36     	; 0x270 <DIO_voidSetPinDir+0x98>
+ 24c:	28 f0       	brcs	.+10     	; 0x258 <DIO_voidSetPinDir+0x80>
+ 24e:	82 30       	cpi	r24, 0x02	; 2
+ 250:	d9 f0       	breq	.+54     	; 0x288 <DIO_voidSetPinDir+0xb0>
+ 252:	83 30       	cpi	r24, 0x03	; 3
+ 254:	29 f1       	breq	.+74     	; 0x2a0 <DIO_voidSetPinDir+0xc8>
+ 256:	08 95       	ret
+ 258:	2b b3       	in	r18, 0x1b	; 27
+ 25a:	81 e0       	ldi	r24, 0x01	; 1
+ 25c:	90 e0       	ldi	r25, 0x00	; 0
+ 25e:	02 c0       	rjmp	.+4      	; 0x264 <DIO_voidSetPinDir+0x8c>
+ 260:	88 0f       	add	r24, r24
+ 262:	99 1f       	adc	r25, r25
+ 264:	6a 95       	dec	r22
+ 266:	e2 f7       	brpl	.-8      	; 0x260 <DIO_voidSetPinDir+0x88>
+ 268:	80 95       	com	r24
+ 26a:	82 23       	and	r24, r18
+ 26c:	8b bb       	out	0x1b, r24	; 27
+ 26e:	08 95       	ret
+ 270:	28 b3       	in	r18, 0x18	; 24
+ 272:	81 e0       	ldi	r24, 0x01	; 1
+ 274:	90 e0       	ldi	r25, 0x00	; 0
+ 276:	02 c0       	rjmp	.+4      	; 0x27c <DIO_voidSetPinDir+0xa4>
+ 278:	88 0f       	add	r24, r24
+ 27a:	99 1f       	adc	r25, r25
+ 27c:	6a 95       	dec	r22
+ 27e:	e2 f7       	brpl	.-8      	; 0x278 <DIO_voidSetPinDir+0xa0>
+ 280:	80 95       	com	r24
+ 282:	82 23       	and	r24, r18
+ 284:	88 bb       	out	0x18, r24	; 24
+ 286:	08 95       	ret
+ 288:	25 b3       	in	r18, 0x15	; 21
+ 28a:	81 e0       	ldi	r24, 0x01	; 1
+ 28c:	90 e0       	ldi	r25, 0x00	; 0
+ 28e:	02 c0       	rjmp	.+4      	; 0x294 <DIO_voidSetPinDir+0xbc>
+ 290:	88 0f       	add	r24, r24
+ 292:	99 1f       	adc	r25, r25
+ 294:	6a 95       	dec	r22
+ 296:	e2 f7       	brpl	.-8      	; 0x290 <DIO_voidSetPinDir+0xb8>
+ 298:	80 95       	com	r24
+ 29a:	82 23       	and	r24, r18
+ 29c:	85 bb       	out	0x15, r24	; 21
+ 29e:	08 95       	ret
+ 2a0:	22 b3       	in	r18, 0x12	; 18
+ 2a2:	81 e0       	ldi	r24, 0x01	; 1
+ 2a4:	90 e0       	ldi	r25, 0x00	; 0
+ 2a6:	02 c0       	rjmp	.+4      	; 0x2ac <DIO_voidSetPinDir+0xd4>
+ 2a8:	88 0f       	add	r24, r24
+ 2aa:	99 1f       	adc	r25, r25
+ 2ac:	6a 95       	dec	r22
+ 2ae:	e2 f7       	brpl	.-8      	; 0x2a8 <DIO_voidSetPinDir+0xd0>
+ 2b0:	80 95       	com	r24
+ 2b2:	82 23       	and	r24, r18
+ 2b4:	82 bb       	out	0x12, r24	; 18
+ 2b6:	08 95       	ret
+
+Disassembly of section .text.DIO_voidSetPinVal:
+
+000002b8 <DIO_voidSetPinVal>:
+ 2b8:	41 30       	cpi	r20, 0x01	; 1
+ 2ba:	a1 f5       	brne	.+104    	; 0x324 <DIO_voidSetPinVal+0x6c>
+ 2bc:	81 30       	cpi	r24, 0x01	; 1
+ 2be:	89 f0       	breq	.+34     	; 0x2e2 <DIO_voidSetPinVal+0x2a>
+ 2c0:	28 f0       	brcs	.+10     	; 0x2cc <DIO_voidSetPinVal+0x14>
+ 2c2:	82 30       	cpi	r24, 0x02	; 2
+ 2c4:	c9 f0       	breq	.+50     	; 0x2f8 <DIO_voidSetPinVal+0x40>
+ 2c6:	83 30       	cpi	r24, 0x03	; 3
+ 2c8:	11 f1       	breq	.+68     	; 0x30e <DIO_voidSetPinVal+0x56>
+ 2ca:	08 95       	ret
+ 2cc:	2a b3       	in	r18, 0x1a	; 26
+ 2ce:	81 e0       	ldi	r24, 0x01	; 1
+ 2d0:	90 e0       	ldi	r25, 0x00	; 0
+ 2d2:	02 c0       	rjmp	.+4      	; 0x2d8 <DIO_voidSetPinVal+0x20>
+ 2d4:	88 0f       	add	r24, r24
+ 2d6:	99 1f       	adc	r25, r25
+ 2d8:	6a 95       	dec	r22
+ 2da:	e2 f7       	brpl	.-8      	; 0x2d4 <DIO_voidSetPinVal+0x1c>
+ 2dc:	82 2b       	or	r24, r18
+ 2de:	8a bb       	out	0x1a, r24	; 26
+ 2e0:	08 95       	ret
+ 2e2:	27 b3       	in	r18, 0x17	; 23
+ 2e4:	81 e0       	ldi	r24, 0x01	; 1
+ 2e6:	90 e0       	ldi	r25, 0x00	; 0
+ 2e8:	02 c0       	rjmp	.+4      	; 0x2ee <DIO_voidSetPinVal+0x36>
+ 2ea:	88 0f       	add	r24, r24
+ 2ec:	99 1f       	adc	r25, r25
+ 2ee:	6a 95       	dec	r22
+ 2f0:	e2 f7       	brpl	.-8      	; 0x2ea <DIO_voidSetPinVal+0x32>
+ 2f2:	82 2b       	or	r24, r18
+ 2f4:	87 bb       	out	0x17, r24	; 23
+ 2f6:	08 95       	ret
+ 2f8:	24 b3       	in	r18, 0x14	; 20
+ 2fa:	81 e0       	ldi	r24, 0x01	; 1
+ 2fc:	90 e0       	ldi	r25, 0x00	; 0
+ 2fe:	02 c0       	rjmp	.+4      	; 0x304 <DIO_voidSetPinVal+0x4c>
+ 300:	88 0f       	add	r24, r24
+ 302:	99 1f       	adc	r25, r25
+ 304:	6a 95       	dec	r22
+ 306:	e2 f7       	brpl	.-8      	; 0x300 <DIO_voidSetPinVal+0x48>
+ 308:	82 2b       	or	r24, r18
+ 30a:	84 bb       	out	0x14, r24	; 20
+ 30c:	08 95       	ret
+ 30e:	21 b3       	in	r18, 0x11	; 17
+ 310:	81 e0       	ldi	r24, 0x01	; 1
+ 312:	90 e0       	ldi	r25, 0x00	; 0
+ 314:	02 c0       	rjmp	.+4      	; 0x31a <DIO_voidSetPinVal+0x62>
+ 316:	88 0f       	add	r24, r24
+ 318:	99 1f       	adc	r25, r25
+ 31a:	6a 95       	dec	r22
+ 31c:	e2 f7       	brpl	.-8      	; 0x316 <DIO_voidSetPinVal+0x5e>
+ 31e:	82 2b       	or	r24, r18
+ 320:	81 bb       	out	0x11, r24	; 17
+ 322:	08 95       	ret
+ 324:	41 11       	cpse	r20, r1
+ 326:	37 c0       	rjmp	.+110    	; 0x396 <DIO_voidSetPinVal+0xde>
+ 328:	81 30       	cpi	r24, 0x01	; 1
+ 32a:	91 f0       	breq	.+36     	; 0x350 <DIO_voidSetPinVal+0x98>
+ 32c:	28 f0       	brcs	.+10     	; 0x338 <DIO_voidSetPinVal+0x80>
+ 32e:	82 30       	cpi	r24, 0x02	; 2
+ 330:	d9 f0       	breq	.+54     	; 0x368 <DIO_voidSetPinVal+0xb0>
+ 332:	83 30       	cpi	r24, 0x03	; 3
+ 334:	29 f1       	breq	.+74     	; 0x380 <DIO_voidSetPinVal+0xc8>
+ 336:	08 95       	ret
+ 338:	2a b3       	in	r18, 0x1a	; 26
+ 33a:	81 e0       	ldi	r24, 0x01	; 1
+ 33c:	90 e0       	ldi	r25, 0x00	; 0
+ 33e:	02 c0       	rjmp	.+4      	; 0x344 <DIO_voidSetPinVal+0x8c>
+ 340:	88 0f       	add	r24, r24
+ 342:	99 1f       	adc	r25, r25
+ 344:	6a 95       	dec	r22
+ 346:	e2 f7       	brpl	.-8      	; 0x340 <DIO_voidSetPinVal+0x88>
+ 348:	80 95       	com	r24
+ 34a:	82 23       	and	r24, r18
+ 34c:	8a bb       	out	0x1a, r24	; 26
+ 34e:	08 95       	ret
+ 350:	27 b3       	in	r18, 0x17	; 23
+ 352:	81 e0       	ldi	r24, 0x01	; 1
+ 354:	90 e0       	ldi	r25, 0x00	; 0
+ 356:	02 c0       	rjmp	.+4      	; 0x35c <DIO_voidSetPinVal+0xa4>
+ 358:	88 0f       	add	r24, r24
+ 35a:	99 1f       	adc	r25, r25
+ 35c:	6a 95       	dec	r22
+ 35e:	e2 f7       	brpl	.-8      	; 0x358 <DIO_voidSetPinVal+0xa0>
+ 360:	80 95       	com	r24
+ 362:	82 23       	and	r24, r18
+ 364:	87 bb       	out	0x17, r24	; 23
+ 366:	08 95       	ret
+ 368:	24 b3       	in	r18, 0x14	; 20
+ 36a:	81 e0       	ldi	r24, 0x01	; 1
+ 36c:	90 e0       	ldi	r25, 0x00	; 0
+ 36e:	02 c0       	rjmp	.+4      	; 0x374 <DIO_voidSetPinVal+0xbc>
+ 370:	88 0f       	add	r24, r24
+ 372:	99 1f       	adc	r25, r25
+ 374:	6a 95       	dec	r22
+ 376:	e2 f7       	brpl	.-8      	; 0x370 <DIO_voidSetPinVal+0xb8>
+ 378:	80 95       	com	r24
+ 37a:	82 23       	and	r24, r18
+ 37c:	84 bb       	out	0x14, r24	; 20
+ 37e:	08 95       	ret
+ 380:	21 b3       	in	r18, 0x11	; 17
+ 382:	81 e0       	ldi	r24, 0x01	; 1
+ 384:	90 e0       	ldi	r25, 0x00	; 0
+ 386:	02 c0       	rjmp	.+4      	; 0x38c <DIO_voidSetPinVal+0xd4>
+ 388:	88 0f       	add	r24, r24
+ 38a:	99 1f       	adc	r25, r25
+ 38c:	6a 95       	dec	r22
+ 38e:	e2 f7       	brpl	.-8      	; 0x388 <DIO_voidSetPinVal+0xd0>
+ 390:	80 95       	com	r24
+ 392:	82 23       	and	r24, r18
+ 394:	81 bb       	out	0x11, r24	; 17
+ 396:	08 95       	ret
 
 Disassembly of section .text.DIO_voidSetPortDir:
 
-0000012a <DIO_voidSetPortDir>:
-}
+000003e2 <DIO_voidSetPortDir>:
 
 
 void DIO_voidSetPortDir(u8 copy_u8port, u8 copy_u8dir)
 {
 	switch(copy_u8port){
- 12a:	81 30       	cpi	r24, 0x01	; 1
- 12c:	41 f0       	breq	.+16     	; 0x13e <DIO_voidSetPortDir+0x14>
- 12e:	28 f0       	brcs	.+10     	; 0x13a <DIO_voidSetPortDir+0x10>
- 130:	82 30       	cpi	r24, 0x02	; 2
- 132:	39 f0       	breq	.+14     	; 0x142 <DIO_voidSetPortDir+0x18>
- 134:	83 30       	cpi	r24, 0x03	; 3
- 136:	39 f0       	breq	.+14     	; 0x146 <DIO_voidSetPortDir+0x1c>
- 138:	08 95       	ret
+ 3e2:	81 30       	cpi	r24, 0x01	; 1
+ 3e4:	41 f0       	breq	.+16     	; 0x3f6 <DIO_voidSetPortDir+0x14>
+ 3e6:	28 f0       	brcs	.+10     	; 0x3f2 <DIO_voidSetPortDir+0x10>
+ 3e8:	82 30       	cpi	r24, 0x02	; 2
+ 3ea:	39 f0       	breq	.+14     	; 0x3fa <DIO_voidSetPortDir+0x18>
+ 3ec:	83 30       	cpi	r24, 0x03	; 3
+ 3ee:	39 f0       	breq	.+14     	; 0x3fe <DIO_voidSetPortDir+0x1c>
+ 3f0:	08 95       	ret
 		case DIO_PORTA: DDRA_REG=copy_u8dir; break;
- 13a:	6b bb       	out	0x1b, r22	; 27
- 13c:	08 95       	ret
+ 3f2:	6b bb       	out	0x1b, r22	; 27
+ 3f4:	08 95       	ret
 		case DIO_PORTB: DDRB_REG=copy_u8dir; break;
- 13e:	68 bb       	out	0x18, r22	; 24
- 140:	08 95       	ret
+ 3f6:	68 bb       	out	0x18, r22	; 24
+ 3f8:	08 95       	ret
 		case DIO_PORTC: DDRC_REG=copy_u8dir; break;
- 142:	65 bb       	out	0x15, r22	; 21
- 144:	08 95       	ret
+ 3fa:	65 bb       	out	0x15, r22	; 21
+ 3fc:	08 95       	ret
 		case DIO_PORTD: DDRD_REG=copy_u8dir; break;
- 146:	62 bb       	out	0x12, r22	; 18
- 148:	08 95       	ret
+ 3fe:	62 bb       	out	0x12, r22	; 18
+ 400:	08 95       	ret
 
 Disassembly of section .text.DIO_voidSetPortVal:
 
-0000014a <DIO_voidSetPortVal>:
+00000402 <DIO_voidSetPortVal>:
 }
 
 
 void DIO_voidSetPortVal(u8 copy_u8port, u8 copy_u8val)
 {
 	switch(copy_u8port){
- 14a:	81 30       	cpi	r24, 0x01	; 1
- 14c:	41 f0       	breq	.+16     	; 0x15e <DIO_voidSetPortVal+0x14>
- 14e:	28 f0       	brcs	.+10     	; 0x15a <DIO_voidSetPortVal+0x10>
- 150:	82 30       	cpi	r24, 0x02	; 2
- 152:	39 f0       	breq	.+14     	; 0x162 <DIO_voidSetPortVal+0x18>
- 154:	83 30       	cpi	r24, 0x03	; 3
- 156:	39 f0       	breq	.+14     	; 0x166 <DIO_voidSetPortVal+0x1c>
- 158:	08 95       	ret
+ 402:	81 30       	cpi	r24, 0x01	; 1
+ 404:	41 f0       	breq	.+16     	; 0x416 <DIO_voidSetPortVal+0x14>
+ 406:	28 f0       	brcs	.+10     	; 0x412 <DIO_voidSetPortVal+0x10>
+ 408:	82 30       	cpi	r24, 0x02	; 2
+ 40a:	39 f0       	breq	.+14     	; 0x41a <DIO_voidSetPortVal+0x18>
+ 40c:	83 30       	cpi	r24, 0x03	; 3
+ 40e:	39 f0       	breq	.+14     	; 0x41e <DIO_voidSetPortVal+0x1c>
+ 410:	08 95       	ret
 		case DIO_PORTA: PORTA_REG=copy_u8val; break;
- 15a:	6a bb       	out	0x1a, r22	; 26
- 15c:	08 95       	ret
+ 412:	6a bb       	out	0x1a, r22	; 26
+ 414:	08 95       	ret
 		case DIO_PORTB: PORTB_REG=copy_u8val; break;
- 15e:	67 bb       	out	0x17, r22	; 23
- 160:	08 95       	ret
+ 416:	67 bb       	out	0x17, r22	; 23
+ 418:	08 95       	ret
 		case DIO_PORTC: PORTC_REG=copy_u8val; break;
- 162:	64 bb       	out	0x14, r22	; 20
- 164:	08 95       	ret
+ 41a:	64 bb       	out	0x14, r22	; 20
+ 41c:	08 95       	ret
 		case DIO_PORTD: PORTD_REG=copy_u8val; break;
- 166:	61 bb       	out	0x11, r22	; 17
- 168:	08 95       	ret
+ 41e:	61 bb       	out	0x11, r22	; 17
+ 420:	08 95       	ret
 
 Disassembly of section .text.__dummy_fini:
 
-00000190 <_fini>:
- 190:	08 95       	ret
+00000460 <_fini>:
+ 460:	08 95       	ret
 
 Disassembly of section .text.__dummy_funcs_on_exit:
 
-00000192 <__funcs_on_exit>:
- 192:	08 95       	ret
+00000462 <__funcs_on_exit>:
+ 462:	08 95       	ret
 
 Disassembly of section .text.__dummy_simulator_exit:
 
-00000194 <__simulator_exit>:
- 194:	08 95       	ret
+00000464 <__simulator_exit>:
+ 464:	08 95       	ret
 
 Disassembly of section .text.exit:
 
-0000016a <exit>:
- 16a:	ec 01       	movw	r28, r24
- 16c:	0e 94 c9 00 	call	0x192	; 0x192 <__funcs_on_exit>
- 170:	0e 94 c8 00 	call	0x190	; 0x190 <_fini>
- 174:	ce 01       	movw	r24, r28
- 176:	0e 94 ca 00 	call	0x194	; 0x194 <__simulator_exit>
- 17a:	ce 01       	movw	r24, r28
- 17c:	0e 94 c6 00 	call	0x18c	; 0x18c <_Exit>
+00000422 <exit>:
+ 422:	ec 01       	movw	r28, r24
+ 424:	0e 94 31 02 	call	0x462	; 0x462 <__funcs_on_exit>
+ 428:	0e 94 30 02 	call	0x460	; 0x460 <_fini>
+ 42c:	ce 01       	movw	r24, r28
+ 42e:	0e 94 32 02 	call	0x464	; 0x464 <__simulator_exit>
+ 432:	ce 01       	movw	r24, r28
+ 434:	0e 94 2e 02 	call	0x45c	; 0x45c <_Exit>
 
 Disassembly of section .text._Exit:
 
-0000018c <_Exit>:
- 18c:	0e 94 56 00 	call	0xac	; 0xac <_exit>
+0000045c <_Exit>:
+ 45c:	0e 94 56 00 	call	0xac	; 0xac <_exit>

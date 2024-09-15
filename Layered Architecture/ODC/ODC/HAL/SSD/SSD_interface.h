@@ -17,12 +17,13 @@
 #define COMMON_CATHODE  0
 #define COMMON_ANODE    1
 
-
+/*Defining SSD as common cathode*/
 #define SSD_TYPE COMMON_CATHODE
 
 
 void SSD_voidInit(u8 copy_u8port);
-void SSD_voidDisplayNumber(u8 copy_u8port, u8 copy_u8number);
+void SSD_voidDisplayNumberAscending(u8 copy_u8port, u8 copy_u8number);
+void SSD_voidDisplayNumberDescending(u8 copy_u8port, u8 copy_u8number);
 
 
 #endif /* SSD_INTERFACE_H_ */

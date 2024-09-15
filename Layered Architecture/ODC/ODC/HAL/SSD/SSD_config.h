@@ -10,6 +10,7 @@
 #define SSD_CONFIG_H_
 
 
+/*Define pins connections for SSD*/
 #define SSD_PINA DIO_PIN0
 #define SSD_PINB DIO_PIN1
 #define SSD_PINC DIO_PIN2
