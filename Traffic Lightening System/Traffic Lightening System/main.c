@@ -7,10 +7,8 @@
 
 
 #include <avr/io.h>
-#include <util/delay.h>
-
 #define F_CPU 16000000UL // Define the system clock frequency
-
+#include <util/delay.h>
 
 /*
  * Turn on Green LED for 10 seconds.
