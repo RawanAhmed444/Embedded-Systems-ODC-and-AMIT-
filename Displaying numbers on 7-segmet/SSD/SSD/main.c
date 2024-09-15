@@ -6,10 +6,8 @@
  */ 
 
 #include <avr/io.h>
-#include <util/delay.h>
-
 #define F_CPU 16000000UL // Define the system clock frequency
-
+#include <util/delay.h>
 
 int main(void)
 {
