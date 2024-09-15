@@ -7,12 +7,12 @@
 
 
 /*
-In the context of the DIO_reg.h header file, the volatile keyword is used to:
-	Prevent Optimization: The compiler may optimize code by assuming 
-	that variables do not change their values unless explicitly modified within the program. 
-	By declaring the register pointers as volatile,
-	the compiler is prevented from making such assumptions,
-	ensuring that the correct register values are accessed.
+ * In the context of the DIO_reg.h header file, the volatile keyword is used to:
+ * Prevent Optimization: The compiler may optimize code by assuming 
+ * that variables do not change their values unless explicitly modified within the program. 
+ * By declaring the register pointers as volatile,
+ * the compiler is prevented from making such assumptions,
+ * ensuring that the correct register values are accessed.
  */ 
 
 

@@ -6,6 +6,9 @@
  */ 
 
 
+#include "../../LIB/STD_TYPE.h"
+
+
 #ifndef DIO_INTERFACE_H_
 #define DIO_INTERFACE_H_
 
