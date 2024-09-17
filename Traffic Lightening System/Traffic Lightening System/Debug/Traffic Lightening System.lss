@@ -13,23 +13,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY
   4 .debug_aranges 00000020  00000000  00000000  000002e3  2**0
                   CONTENTS, READONLY, DEBUGGING
-  5 .debug_info   00000994  00000000  00000000  00000303  2**0
+  5 .debug_info   0000099d  00000000  00000000  00000303  2**0
                   CONTENTS, READONLY, DEBUGGING
-  6 .debug_abbrev 000005af  00000000  00000000  00000c97  2**0
+  6 .debug_abbrev 000005af  00000000  00000000  00000ca0  2**0
                   CONTENTS, READONLY, DEBUGGING
-  7 .debug_line   000002c8  00000000  00000000  00001246  2**0
+  7 .debug_line   000002c8  00000000  00000000  0000124f  2**0
                   CONTENTS, READONLY, DEBUGGING
-  8 .debug_frame  00000034  00000000  00000000  00001510  2**2
+  8 .debug_frame  00000034  00000000  00000000  00001518  2**2
                   CONTENTS, READONLY, DEBUGGING
-  9 .debug_str    00000196  00000000  00000000  00001544  2**0
+  9 .debug_str    00000196  00000000  00000000  0000154c  2**0
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_loc    000001eb  00000000  00000000  000016da  2**0
+ 10 .debug_loc    000001eb  00000000  00000000  000016e2  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_ranges 00000010  00000000  00000000  000018c5  2**0
+ 11 .debug_ranges 00000010  00000000  00000000  000018cd  2**0
                   CONTENTS, READONLY, DEBUGGING
  12 .text         00000004  000001f0  000001f0  00000284  2**1
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
- 13 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  000018d8  2**2
+ 13 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  000018e0  2**2
                   CONTENTS, READONLY, DEBUGGING
  14 .rodata       00000014  00800060  000001fe  00000292  2**0
                   CONTENTS, ALLOC, LOAD, DATA
@@ -130,7 +130,7 @@ Disassembly of section .text:
 Disassembly of section .text:
 
 000001f0 <__bad_interrupt>:
- 1f0:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+ 1f0:	0c 94 00 00 	jmp	0	; 0x0 <__TEXT_REGION_ORIGIN__>
 
 Disassembly of section .text.main:
 
@@ -201,16 +201,16 @@ int main(void)
 	#endif
 
 	__builtin_avr_delay_cycles(__ticks_dc);
-  f6:	2f e7       	ldi	r18, 0x7F	; 127
-  f8:	34 e8       	ldi	r19, 0x84	; 132
-  fa:	4e e1       	ldi	r20, 0x1E	; 30
+  f6:	2f ef       	ldi	r18, 0xFF	; 255
+  f8:	31 ee       	ldi	r19, 0xE1	; 225
+  fa:	44 e0       	ldi	r20, 0x04	; 4
   fc:	21 50       	subi	r18, 0x01	; 1
   fe:	30 40       	sbci	r19, 0x00	; 0
  100:	40 40       	sbci	r20, 0x00	; 0
  102:	e1 f7       	brne	.-8      	; 0xfc <main+0x4c>
  104:	00 c0       	rjmp	.+0      	; 0x106 <main+0x56>
  106:	00 00       	nop
-				 _delay_ms(10000) ;
+				 _delay_ms(100) ;
 				 break ;
 			 }
 			 PORTC = arr[x] ;
@@ -228,9 +228,9 @@ int main(void)
 			 PORTD = arr[9] ;
  11e:	2b 89       	ldd	r18, Y+19	; 0x13
  120:	22 bb       	out	0x12, r18	; 18
- 122:	3f e7       	ldi	r19, 0x7F	; 127
- 124:	44 e8       	ldi	r20, 0x84	; 132
- 126:	2e e1       	ldi	r18, 0x1E	; 30
+ 122:	3f ef       	ldi	r19, 0xFF	; 255
+ 124:	41 ee       	ldi	r20, 0xE1	; 225
+ 126:	24 e0       	ldi	r18, 0x04	; 4
  128:	31 50       	subi	r19, 0x01	; 1
  12a:	40 40       	sbci	r20, 0x00	; 0
  12c:	20 40       	sbci	r18, 0x00	; 0
@@ -274,9 +274,9 @@ int main(void)
 			 PORTD = arr[9] ;
  15e:	2b 89       	ldd	r18, Y+19	; 0x13
  160:	22 bb       	out	0x12, r18	; 18
- 162:	3f e7       	ldi	r19, 0x7F	; 127
- 164:	44 e8       	ldi	r20, 0x84	; 132
- 166:	2e e1       	ldi	r18, 0x1E	; 30
+ 162:	3f ef       	ldi	r19, 0xFF	; 255
+ 164:	41 ee       	ldi	r20, 0xE1	; 225
+ 166:	24 e0       	ldi	r18, 0x04	; 4
  168:	31 50       	subi	r19, 0x01	; 1
  16a:	40 40       	sbci	r20, 0x00	; 0
  16c:	20 40       	sbci	r18, 0x00	; 0
@@ -314,16 +314,16 @@ int main(void)
 				 PORTD = arr[8] ;
  18e:	29 89       	ldd	r18, Y+17	; 0x11
  190:	22 bb       	out	0x12, r18	; 18
- 192:	3f e7       	ldi	r19, 0x7F	; 127
- 194:	44 e8       	ldi	r20, 0x84	; 132
- 196:	2e e1       	ldi	r18, 0x1E	; 30
+ 192:	3f ef       	ldi	r19, 0xFF	; 255
+ 194:	41 ee       	ldi	r20, 0xE1	; 225
+ 196:	24 e0       	ldi	r18, 0x04	; 4
  198:	31 50       	subi	r19, 0x01	; 1
  19a:	40 40       	sbci	r20, 0x00	; 0
  19c:	20 40       	sbci	r18, 0x00	; 0
  19e:	e1 f7       	brne	.-8      	; 0x198 <main+0xe8>
  1a0:	00 c0       	rjmp	.+0      	; 0x1a2 <main+0xf2>
  1a2:	00 00       	nop
-				 _delay_ms(10000) ;
+				 _delay_ms(100) ;
 				 break ;
 			 }
 			 PORTC = arr[x] ;
@@ -341,9 +341,9 @@ int main(void)
 			 PORTD = arr[9] ;
  1ba:	2b 89       	ldd	r18, Y+19	; 0x13
  1bc:	22 bb       	out	0x12, r18	; 18
- 1be:	3f e7       	ldi	r19, 0x7F	; 127
- 1c0:	44 e8       	ldi	r20, 0x84	; 132
- 1c2:	2e e1       	ldi	r18, 0x1E	; 30
+ 1be:	3f ef       	ldi	r19, 0xFF	; 255
+ 1c0:	41 ee       	ldi	r20, 0xE1	; 225
+ 1c2:	24 e0       	ldi	r18, 0x04	; 4
  1c4:	31 50       	subi	r19, 0x01	; 1
  1c6:	40 40       	sbci	r20, 0x00	; 0
  1c8:	20 40       	sbci	r18, 0x00	; 0

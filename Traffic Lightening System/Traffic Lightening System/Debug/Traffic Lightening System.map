@@ -366,10 +366,10 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000      0x994
+.debug_info     0x0000000000000000      0x99d
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000      0x4e6 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/xc8/avr/lib/avr5/memx-const/crtatmega32.o
- .debug_info    0x00000000000004e6      0x4ae main.o
+ .debug_info    0x00000000000004e6      0x4b7 main.o
 
 .debug_abbrev   0x0000000000000000      0x5af
  *(.debug_abbrev)

@@ -39,12 +39,12 @@ int main(void)
 			 {
 				 PORTC = arr[9] ;
 				 PORTD = arr[8] ;
-				 _delay_ms(10000) ;
+				 _delay_ms(100) ;
 				 break ;
 			 }
 			 PORTC = arr[x] ;
 			 PORTD = arr[9] ;
-			 _delay_ms(10000) ;
+			 _delay_ms(100) ;
 			 while (x == 8)	//When reaching 0 break the loop
 			 {
 				 break ;
@@ -57,7 +57,7 @@ int main(void)
 			 PORTA = 0x02 ;	//Setting PINA1 HIGH
 			 PORTC = arr[x+6] ;
 			 PORTD = arr[9] ;
-			 _delay_ms(10000) ;
+			 _delay_ms(100) ;
 			 while (x == 8)	//When reaching 0 break the loop
 			 {
 				 break ;
@@ -72,12 +72,12 @@ int main(void)
 			 {
 				 PORTC = arr[9] ;
 				 PORTD = arr[8] ;
-				 _delay_ms(10000) ;
+				 _delay_ms(100) ;
 				 break ;
 			 }
 			 PORTC = arr[x] ;
 			 PORTD = arr[9] ;
-			 _delay_ms(10000) ;
+			 _delay_ms(100) ;
 			 while (x == 8)	//When reaching 0 break the loop
 			 {
 				 break ;
