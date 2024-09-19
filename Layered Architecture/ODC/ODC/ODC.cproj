@@ -91,7 +91,13 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="APP\main.c">
+    <Compile Include="HAL\LCD\LCD_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\LCD\LCD_interface.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\LCD\LCD_prog.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="HAL\LED\LED_config.h">
@@ -110,6 +116,15 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="HAL\SSD\SSD_prog.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\SWITCH\SWITCH_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\SWITCH\SWITCH_interface.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\SWITCH\SWITCH_prog.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="LIB\BIT_MATH.h">
@@ -132,6 +147,8 @@
     <Folder Include="APP" />
     <Folder Include="HAL" />
     <Folder Include="HAL\LED" />
+    <Folder Include="HAL\LCD" />
+    <Folder Include="HAL\SWITCH" />
     <Folder Include="HAL\SSD" />
     <Folder Include="MCAL" />
     <Folder Include="LIB" />
