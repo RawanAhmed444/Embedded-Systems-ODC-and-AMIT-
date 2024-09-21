@@ -4,6 +4,7 @@
  * Created: 9/17/2024 9:46:59 PM
  *  Author: RAWAN
  */ 
+#include "../../LIB/STD_TYPE.h"
 
 
 #ifndef LCD_INTERFACE_H_

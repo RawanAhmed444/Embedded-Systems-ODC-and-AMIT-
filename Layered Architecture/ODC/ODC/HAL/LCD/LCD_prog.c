@@ -8,7 +8,7 @@
 #include "../../LIB/BIT_MATH.h"
 #include "../../LIB/STD_TYPE.h"
 #include "LCD_interface.h"
-#include "LED_config.h"
+#include "LCD_config.h"
 
 
 #define  F_CPU 16000000UL
