@@ -1,5 +1,7 @@
-APP/main.d APP/main.o: ../APP/main.c ../APP/../HAL/LCD/LCD_interface.h \
- ../APP/../HAL/LCD/../../LIB/STD_TYPE.h ../APP/../HAL/LCD/LCD_config.h \
+APP/main.d APP/main.o: ../APP/main.c ../APP/../HAL/LED/LED_interface.h \
+ ../APP/../HAL/LED/../../LIB/STD_TYPE.h \
+ ../APP/../HAL/SWITCH/SWITCH_config.h \
+ ../APP/../HAL/SWITCH/SWITCH_interface.h \
  ../APP/../MCAL/DIO/DIO_interface.h \
  ../APP/../MCAL/DIO/../../LIB/STD_TYPE.h ../APP/../LIB/BIT_MATH.h \
  ../APP/../LIB/STD_TYPE.h \
@@ -13,11 +15,13 @@ APP/main.d APP/main.o: ../APP/main.c ../APP/../HAL/LCD/LCD_interface.h \
  c:\program\ files\microchip\xc8\v2.36\avr\avr\include\util\delay_basic.h \
  c:\program\ files\microchip\xc8\v2.36\avr\avr\include\math.h
 
-../APP/../HAL/LCD/LCD_interface.h:
+../APP/../HAL/LED/LED_interface.h:
 
-../APP/../HAL/LCD/../../LIB/STD_TYPE.h:
+../APP/../HAL/LED/../../LIB/STD_TYPE.h:
 
-../APP/../HAL/LCD/LCD_config.h:
+../APP/../HAL/SWITCH/SWITCH_config.h:
+
+../APP/../HAL/SWITCH/SWITCH_interface.h:
 
 ../APP/../MCAL/DIO/DIO_interface.h:
 

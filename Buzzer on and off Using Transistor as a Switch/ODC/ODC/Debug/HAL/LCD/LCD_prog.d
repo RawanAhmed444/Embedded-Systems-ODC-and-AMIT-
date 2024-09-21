@@ -1,8 +1,8 @@
-APP/main.d APP/main.o: ../APP/main.c ../APP/../HAL/LCD/LCD_interface.h \
- ../APP/../HAL/LCD/../../LIB/STD_TYPE.h ../APP/../HAL/LCD/LCD_config.h \
- ../APP/../MCAL/DIO/DIO_interface.h \
- ../APP/../MCAL/DIO/../../LIB/STD_TYPE.h ../APP/../LIB/BIT_MATH.h \
- ../APP/../LIB/STD_TYPE.h \
+HAL/LCD/LCD_prog.d HAL/LCD/LCD_prog.o: ../HAL/LCD/LCD_prog.c \
+ ../HAL/LCD/../../LIB/BIT_MATH.h ../HAL/LCD/../../LIB/STD_TYPE.h \
+ ../HAL/LCD/../../MCAL/DIO/DIO_interface.h \
+ ../HAL/LCD/../../MCAL/DIO/../../LIB/STD_TYPE.h \
+ ../HAL/LCD/LCD_interface.h ../HAL/LCD/LCD_config.h \
  c:\program\ files\microchip\xc8\v2.36\avr\avr\include\util\delay.h \
  c:\program\ files\microchip\xc8\v2.36\avr\avr\include\inttypes.h \
  c:\program\ files\microchip\xc8\v2.36\avr\avr\include\features.h \
@@ -13,19 +13,17 @@ APP/main.d APP/main.o: ../APP/main.c ../APP/../HAL/LCD/LCD_interface.h \
  c:\program\ files\microchip\xc8\v2.36\avr\avr\include\util\delay_basic.h \
  c:\program\ files\microchip\xc8\v2.36\avr\avr\include\math.h
 
-../APP/../HAL/LCD/LCD_interface.h:
+../HAL/LCD/../../LIB/BIT_MATH.h:
 
-../APP/../HAL/LCD/../../LIB/STD_TYPE.h:
+../HAL/LCD/../../LIB/STD_TYPE.h:
 
-../APP/../HAL/LCD/LCD_config.h:
+../HAL/LCD/../../MCAL/DIO/DIO_interface.h:
 
-../APP/../MCAL/DIO/DIO_interface.h:
+../HAL/LCD/../../MCAL/DIO/../../LIB/STD_TYPE.h:
 
-../APP/../MCAL/DIO/../../LIB/STD_TYPE.h:
+../HAL/LCD/LCD_interface.h:
 
-../APP/../LIB/BIT_MATH.h:
-
-../APP/../LIB/STD_TYPE.h:
+../HAL/LCD/LCD_config.h:
 
 c:\program\ files\microchip\xc8\v2.36\avr\avr\include\util\delay.h:
 
