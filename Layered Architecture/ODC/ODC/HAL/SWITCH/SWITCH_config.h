@@ -11,6 +11,7 @@
 
 
 #define DEBOUNCE_DELAY	200
+//#define SWITCH_PIN	DIO_PIN0
 
 
 #endif /* SWITCH_CONFIG_H_ */

@@ -91,7 +91,13 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="APP\main.c">
+    <Compile Include="HAL\KEYPAD\KEYPAD_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\KEYPAD\KEYPAD_interface.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="HAL\KEYPAD\KEYPAD_prog.c">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="HAL\LCD\LCD_config.h">
@@ -151,6 +157,7 @@
     <Folder Include="HAL" />
     <Folder Include="HAL\LED" />
     <Folder Include="HAL\LCD" />
+    <Folder Include="HAL\KEYPAD" />
     <Folder Include="HAL\SWITCH" />
     <Folder Include="HAL\SSD" />
     <Folder Include="MCAL" />

@@ -37,6 +37,7 @@ SUBDIRS :=  \
 ../HAL \
 ../HAL/LED \
 ../HAL/LCD \
+../HAL/KEYPAD \
 ../HAL/SWITCH \
 ../HAL/SSD \
 ../MCAL \
@@ -46,7 +47,7 @@ SUBDIRS :=  \
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
-../APP/main.c \
+../HAL/KEYPAD/KEYPAD_prog.c \
 ../HAL/LCD/LCD_prog.c \
 ../HAL/LED/LED_prog.c \
 ../HAL/SSD/SSD_prog.c \
@@ -61,7 +62,7 @@ ASM_SRCS +=
 
 
 OBJS +=  \
-APP/main.o \
+HAL/KEYPAD/KEYPAD_prog.o \
 HAL/LCD/LCD_prog.o \
 HAL/LED/LED_prog.o \
 HAL/SSD/SSD_prog.o \
@@ -69,7 +70,7 @@ HAL/SWITCH/SWITCH_prog.o \
 MCAL/DIO/DIO_prog.o
 
 OBJS_AS_ARGS +=  \
-APP/main.o \
+HAL/KEYPAD/KEYPAD_prog.o \
 HAL/LCD/LCD_prog.o \
 HAL/LED/LED_prog.o \
 HAL/SSD/SSD_prog.o \
@@ -77,7 +78,7 @@ HAL/SWITCH/SWITCH_prog.o \
 MCAL/DIO/DIO_prog.o
 
 C_DEPS +=  \
-APP/main.d \
+HAL/KEYPAD/KEYPAD_prog.d \
 HAL/LCD/LCD_prog.d \
 HAL/LED/LED_prog.d \
 HAL/SSD/SSD_prog.d \
@@ -85,7 +86,7 @@ HAL/SWITCH/SWITCH_prog.d \
 MCAL/DIO/DIO_prog.d
 
 C_DEPS_AS_ARGS +=  \
-APP/main.d \
+HAL/KEYPAD/KEYPAD_prog.d \
 HAL/LCD/LCD_prog.d \
 HAL/LED/LED_prog.d \
 HAL/SSD/SSD_prog.d \
@@ -106,7 +107,7 @@ LINKER_SCRIPT_DEP+=
 
 
 # AVR32/GNU C Compiler
-APP/main.o: ../APP/main.c
+HAL/KEYPAD/KEYPAD_prog.o: ../HAL/KEYPAD/KEYPAD_prog.c
 	@echo Building file: $<
 	@echo Invoking: XC8 C Compiler : 2.36
 	$(QUOTE)C:\Program Files\Microchip\xc8\v2.36\bin\xc8-cc.exe$(QUOTE)  -mcpu=ATmega32  -mdfp="C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.7.374\xc8"  -c -x c -funsigned-char -funsigned-bitfields -mext=cci -D__ATmega32__ -DDEBUG  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"   -o "$@" "$<" 
